@@ -1,0 +1,10 @@
+## C = Strength of the regularization
+## Epsilon = Max Epsilon
+## Cache_size = Size of the kernel cache (in MB)
+## Max Iter = Max iterations
+
+# 1:            2:           3: 4:       5:
+c             "--c "         r  (1, 20)
+epsilon       "--epi "       r  (0.1, 20)
+cache_size    "--cs "        r  (1, 1000)
+max_iter      "--iter "      i  (1, 100)
