@@ -1,0 +1,10 @@
+algo=/Users/suzanneong/Desktop/Topics/GPLearn/target-runner
+execDir=./
+deterministic=false
+run_obj=quality
+cutoff_time=1
+tunerTimeout=999999
+overall_obj=mean
+paramfile=params.pcs
+instance_file=instances.txt
+feature_file=features.csv

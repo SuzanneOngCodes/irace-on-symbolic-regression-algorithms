@@ -1,0 +1,1 @@
+['./main.py', '-v', '--pop', '1', '--gen', '34', '--cros', '0.21', '--pc', '0.92', '-f', '../Datasets/strogatz_vdp1.csv', '--datfile', 'c52-48t.dat']

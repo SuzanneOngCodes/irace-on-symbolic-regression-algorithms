@@ -1,0 +1,7 @@
+population [1,300] [249]i
+generation [1,100] [12]i
+crossover [0.01,1] [0.85]
+parsimony_coefficient [0.01,1] [0.32]
+
+
+#Conditions:
