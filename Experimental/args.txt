@@ -1,1 +1,0 @@
-['/opt/anaconda3/lib/python3.8/site-packages/ipykernel_launcher.py', '-f', '/Users/suzanneong/Library/Jupyter/runtime/kernel-d3434c1d-44a7-4ce8-bf6f-b589701f0f6b.json']
