@@ -1,0 +1,7 @@
+## The format is one parameter per line. Each line contains:
+## random_seed = Random seed, n_epochs = number of epochs, complexity = max_ complexity
+
+# 1:             2:              3:  4:      5:
+random_seed      "--ran "        i  (0, 400)
+n_epochs         "--epo "        i  (1, 1000)
+complexity       "--comp "       i  (1, 100)
