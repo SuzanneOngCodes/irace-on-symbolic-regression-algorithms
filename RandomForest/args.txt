@@ -1,1 +1,0 @@
-['./main.py', '-v', '--num', '47', '--dep', '1', '--jobs', '6', '--ver', '10', '-f', '../Datasets/strogatz_lv2.csv', '--datfile', 'c74-47t.dat']
