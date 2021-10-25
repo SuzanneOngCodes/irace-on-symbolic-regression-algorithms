@@ -1,0 +1,11 @@
+## Strogatz
+../Datasets/strogatz_bacres2.csv
+../Datasets/strogatz_barmag1.csv
+../Datasets/strogatz_barmag2.csv
+../Datasets/strogatz_glider1.csv
+../Datasets/strogatz_glider2.csv
+../Datasets/strogatz_lv1.csv
+../Datasets/strogatz_lv2.csv
+../Datasets/strogatz_vdp1.csv
+../Datasets/strogatz_vdp2.csv
+../Datasets/strogatz_shearflow1.csv
