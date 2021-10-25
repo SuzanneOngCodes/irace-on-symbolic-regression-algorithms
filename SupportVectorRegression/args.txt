@@ -1,1 +1,0 @@
-['./main.py', '-v', '--c', '1.69', '--epi', '4.35', '--cs', '68.54', '--iter', '1', '-f', '../Datasets/strogatz_vdp2.csv', '--datfile', 'c80-49t.dat'].dat']
