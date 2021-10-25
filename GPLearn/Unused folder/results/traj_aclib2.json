@@ -1,6 +1,0 @@
-{"cputime": 10, "evaluations": 7, "cost": -1.73873233267178, "incumbent": ["population=15", "generation=3", "crossover=0.04", "parsimony_coefficient=0.47"], "total_cpu_time": null, "wallclock_time": 10}
-{"cputime": 10, "evaluations": 9, "cost": -2.41466240065026, "incumbent": ["population=15", "generation=3", "crossover=0.04", "parsimony_coefficient=0.47"], "total_cpu_time": null, "wallclock_time": 10}
-{"cputime": 10, "evaluations": 10, "cost": -4.0915543168985, "incumbent": ["population=15", "generation=3", "crossover=0.04", "parsimony_coefficient=0.47"], "total_cpu_time": null, "wallclock_time": 10}
-{"cputime": 103, "evaluations": 11, "cost": -140161616.829265, "incumbent": ["population=2", "generation=7", "crossover=0.06", "parsimony_coefficient=0.47"], "total_cpu_time": null, "wallclock_time": 103}
-{"cputime": 103, "evaluations": 12, "cost": -128481482.204931, "incumbent": ["population=2", "generation=7", "crossover=0.06", "parsimony_coefficient=0.47"], "total_cpu_time": null, "wallclock_time": 103}
-{"cputime": 103, "evaluations": 13, "cost": -118598291.664334, "incumbent": ["population=2", "generation=7", "crossover=0.06", "parsimony_coefficient=0.47"], "total_cpu_time": null, "wallclock_time": 103}
