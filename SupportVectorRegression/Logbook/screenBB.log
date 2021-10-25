@@ -1,0 +1,474 @@
+Script started on Sun Oct 24 16:00:29 2021
+Restored session: Sun 24 Oct 2021 15:39:43 ACDT
+[1m[7m%[27m[1m[0m                                                                                                                                 ]7;file://Sushis-MacBook.local/Users/suzanneong/Desktop/Topics/SupportVectorRegression[0m[27m[24m[J(base) suzanneong@Sushis-MacBook SupportVectorRegression % [K[?2004hexitiraceexit iraceexit     [7mirace --debug-level 1     [27m[26D[27mi[27mr[27ma[27mc[27me[27m [27m-[27m-[27md[27me[27mb[27mu[27mg[27m-[27ml[27me[27mv[27me[27ml[27m [27m1[27m [27m [27m [27m [27m [?2004l
+#------------------------------------------------------------------------------
+# irace: An implementation in R of (Elitist) Iterated Racing
+# Version: 3.4.1.9fcaeaf
+# Copyright (C) 2010-2020
+# Manuel Lopez-Ibanez     <manuel.lopez-ibanez@manchester.ac.uk>
+# Jeremie Dubois-Lacoste  
+# Leslie Perez Caceres    <leslie.perez.caceres@ulb.ac.be>
+#
+# This is free software, and you are welcome to redistribute it under certain
+# conditions.  See the GNU General Public License for details. There is NO
+# WARRANTY; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+#
+# irace builds upon previous code from the race package:
+#     race: Racing methods for the selection of the best
+#     Copyright (C) 2003 Mauro Birattari
+#------------------------------------------------------------------------------
+# installed at: /Library/Frameworks/R.framework/Versions/4.1-arm64/Resources/library/irace
+# called with: --debug-level 1
+Warning: A default scenario file './scenario.txt' has been found and will be read
+# 0 expression(s) specifying forbidden configurations read from '/Users/suzanneong/Desktop/Topics/SupportVectorRegression/forbidden.txt'
+Warning: Assuming 'mu = firstTest' because 'mu' cannot be lower than 'firstTest'
+## irace scenario:
+scenarioFile = "./scenario.txt"
+parameterFile = "/Users/suzanneong/Desktop/Topics/SupportVectorRegression/parameters.txt"
+execDir = "/Users/suzanneong/Desktop/Topics/SupportVectorRegression"
+logFile = "/Users/suzanneong/Desktop/Topics/SupportVectorRegression/irace.Rdata"
+recoveryFile = NULL
+instances = c("/Users/suzanneong/Desktop/Topics/SupportVectorRegression/../Datasets/body_fat.csv", "/Users/suzanneong/Desktop/Topics/SupportVectorRegression/../Datasets/Hill_Valley_with_noise.csv", "/Users/suzanneong/Desktop/Topics/SupportVectorRegression/../Datasets/allbp.csv", "/Users/suzanneong/Desktop/Topics/SupportVectorRegression/../Datasets/analcatdata_cyyoung9302.csv", "/Users/suzanneong/Desktop/Topics/SupportVectorRegression/../Datasets/229_pwLinear.csv", "/Users/suzanneong/Desktop/Topics/SupportVectorRegression/../Datasets/prnn_crabs.csv", "/Users/suzanneong/Desktop/Topics/SupportVectorRegression/../Datasets/tic_tac_toe.csv", "/Users/suzanneong/Desktop/Topics/SupportVectorRegression/../Datasets/503_wind.csv", "/Users/suzanneong/Desktop/Topics/SupportVectorRegression/../Datasets/588_fri_c4_1000_100.csv", "/Users/suzanneong/Desktop/Topics/SupportVectorRegression/../Datasets/658_fri_c3_250_25.csv")
+initConfigurations = NULL
+trainInstancesDir = "/Users/suzanneong/Desktop/Topics/SupportVectorRegression"
+trainInstancesFile = "/Users/suzanneong/Desktop/Topics/i.txt"
+configurationsFile = ""
+forbiddenExps = NULL = expression()
+forbiddenFile = "/Users/suzanneong/Desktop/Topics/SupportVectorRegression/forbidden.txt"
+targetRunner = "/Users/suzanneong/Desktop/Topics/SupportVectorRegression/target-runner"
+targetRunnerRetries = 0
+targetRunnerData = ""
+targetRunnerParallel = NULL
+targetEvaluator = NULL
+maxExperiments = 1000
+maxTime = 0
+budgetEstimation = 0.02
+digits = 2
+debugLevel = 1
+nbIterations = 0
+nbExperimentsPerIteration = 0
+sampleInstances = TRUE
+testType = "friedman"
+firstTest = 10
+eachTest = 1
+minNbSurvival = 0
+nbConfigurations = 0
+mu = 10
+confidence = 0.95
+deterministic = TRUE
+seed = 1000
+parallel = 4
+loadBalancing = FALSE
+mpi = FALSE
+batchmode = "0"
+softRestart = TRUE
+softRestartThreshold = 0.01
+testInstancesDir = ""
+testInstancesFile = "/Users/suzanneong/Desktop/Topics/i.txt"
+testInstances = c("1t" = "../Datasets/body_fat.csv", "2t" = "../Datasets/Hill_Valley_with_noise.csv", "3t" = "../Datasets/allbp.csv", "4t" = "../Datasets/analcatdata_cyyoung9302.csv", "5t" = "../Datasets/229_pwLinear.csv", "6t" = "../Datasets/prnn_crabs.csv", "7t" = "../Datasets/tic_tac_toe.csv", "8t" = "../Datasets/503_wind.csv", "9t" = "../Datasets/588_fri_c4_1000_100.csv", "10t" = "../Datasets/658_fri_c3_250_25.csv")
+testNbElites = 1
+testIterationElites = TRUE
+elitist = TRUE
+elitistNewInstances = 1
+elitistLimit = 2
+repairConfiguration = NULL
+capping = FALSE
+cappingType = "median"
+boundType = "candidate"
+boundMax = NULL
+boundDigits = 0
+boundPar = 1
+boundAsTimeout = TRUE
+postselection = 0
+aclib = FALSE
+## end of irace scenario
+# --- Parameters Hierarchy ---
+[1] "c"        "epsilon"  "tol"      "max_iter"
+       c  epsilon      tol max_iter 
+       1        1        1        1 
+       c  epsilon      tol max_iter 
+      ""       ""       ""       "" 
+  Parameter Level Depends.on
+1         c     1           
+2   epsilon     1           
+3       tol     1           
+4  max_iter     1           
+
+# ------------------------
+# 0 expression(s) specifying forbidden configurations read from '/Users/suzanneong/Desktop/Topics/SupportVectorRegression/forbidden.txt'
+# 2021-10-24 16:00:33 ACDT: Initialization
+# Elitist race
+# Elitist new instances: 1
+# Elitist limit: 2
+# nbIterations: 4
+# minNbSurvival: 4
+# nbParameters: 4
+# seed: 1000
+# confidence level: 0.95
+# budget: 1000
+# mu: 10
+# deterministic: TRUE
+
+# 2021-10-24 16:00:33 ACDT: Iteration 1 of 4
+# experimentsUsedSoFar: 0
+# remainingBudget: 1000
+# currentBudget: 250
+# nbConfigurations: 22
+# 2021-10-24 16:00:33 ACDT: Sample 22 configurations from uniform distribution
+# 2021-10-24 16:00:33 ACDT: Launch race
+# Markers:
+     x No test is performed.
+     c Configurations are discarded only due to capping.
+     - The test is performed and some configurations are discarded.
+     = The test is performed but no configuration is discarded.
+     ! The test is performed and configurations could be discarded but elite configurations are preserved.
+     . All alive configurations are elite and nothing is discarded
+
++-+-----------+-----------+-----------+---------------+-----------+--------+-----+----+------+
+| |   Instance|      Alive|       Best|      Mean best| Exp so far|  W time|  rho|KenW|  Qvar|
++-+-----------+-----------+-----------+---------------+-----------+--------+-----+----+------+
+|x|          1|         22|          1|  -0.5000000000|         22|00:00:07|   NA|  NA|    NA|
+|x|          2|         22|          1|  -0.5000000000|         44|00:00:07|+1.00|1.00|0.0000|
+|x|          3|         22|          1|  -0.6614684570|         66|00:00:07|+1.00|1.00|0.0000|
+|x|          4|         22|          1|   -1.622857370|         88|00:00:07|+0.00|0.25|0.2386|
+|x|          5|         22|          1|   -3.032539974|        110|00:00:07|+0.14|0.32|0.3056|
+|x|          6|         22|          1|   -2.610449979|        132|00:00:07|+0.12|0.26|0.2674|
+|x|          7|         22|          1|   -2.308957125|        154|00:00:07|+0.10|0.23|0.2364|
+|x|          8|         22|          1|   -2.156793540|        176|00:00:07|+0.08|0.20|0.2114|
+|x|          9|         22|          1|   -2.036728496|        198|00:00:06|+0.07|0.18|0.1909|
+|-|         10|         18|          1|   -2.737108732|        220|00:00:06|+0.11|0.20|0.1681|
++-+-----------+-----------+-----------+---------------+-----------+--------+-----+----+------+
+# Stopped because all instances (10) evaluated
+Best-so-far configuration:           1    mean value:    -2.737108732
+Description of the best-so-far configuration:
+  .ID.       c epsilon tol max_iter .PARENT.
+1    1 9661.79   51.04 0.7       21       NA
+
+# 2021-10-24 16:01:48 ACDT: Extracting elites
+# 2021-10-24 16:01:48 ACDT: Elite configurations (first number is the configuration ID; listed from best to worst according to the sum of ranks):
+  .ID.       c epsilon  tol max_iter .PARENT. .ALIVE. .RANK. .WEIGHT.
+1    1 9661.79   51.04 0.70       21       NA    TRUE     93      0.4
+2    2 7835.71   58.48 0.32      997       NA    TRUE     93      0.3
+4    4 7129.93   70.31 0.56      259       NA    TRUE     93      0.2
+5    5 5069.42   72.71 0.68       38       NA    TRUE     93      0.1
+# 2021-10-24 16:01:48 ACDT: Initialise model
+# 2021-10-24 16:01:48 ACDT: End of iteration 1
+# 2021-10-24 16:01:48 ACDT: Iteration 2 of 4
+# experimentsUsedSoFar: 220
+# remainingBudget: 780
+# currentBudget: 260
+# nbConfigurations: 25
+# 2021-10-24 16:01:48 ACDT: Update model
+# 2021-10-24 16:01:48 ACDT: Sample 21 configurations from model
+# 2021-10-24 16:01:48 ACDT: Computing similarity of configurations ......................... DONE
+# 2021-10-24 16:01:48 ACDT: Launch race
+# Markers:
+     x No test is performed.
+     c Configurations are discarded only due to capping.
+     - The test is performed and some configurations are discarded.
+     = The test is performed but no configuration is discarded.
+     ! The test is performed and configurations could be discarded but elite configurations are preserved.
+     . All alive configurations are elite and nothing is discarded
+
++-+-----------+-----------+-----------+---------------+-----------+--------+-----+----+------+
+| |   Instance|      Alive|       Best|      Mean best| Exp so far|  W time|  rho|KenW|  Qvar|
++-+-----------+-----------+-----------+---------------+-----------+--------+-----+----+------+
+|x|          4|         25|          1|   -4.507024108|         21|00:00:06|   NA|  NA|    NA|
+|x|          6|         25|          1|   -2.503512054|         42|00:00:07|+0.00|0.50|0.4800|
+|x|          1|         25|          1|   -1.835674703|         63|00:00:07|+0.00|0.33|0.3200|
+|x|          3|         25|          1|   -1.622857370|         84|00:00:08|+0.00|0.25|0.2400|
+|x|          9|         25|          1|   -1.513527524|        105|00:00:08|+0.25|0.40|0.2880|
+|x|         10|         25|          1|   -2.768028079|        126|00:00:09|+0.31|0.42|0.2890|
+|x|          8|         25|          1|   -2.528545275|        147|00:00:07|+0.26|0.36|0.2750|
+|x|          2|         25|          1|   -2.274977116|        168|00:00:07|+0.22|0.32|0.2577|
+|x|          5|         25|         28|   -2.985676369|        189|00:00:07|+0.26|0.34|0.2725|
+|-|          7|         23|         28|   -2.737108732|        210|00:00:08|+0.00|0.10|9.2783|
++-+-----------+-----------+-----------+---------------+-----------+--------+-----+----+------+
+# Stopped because all instances (10) evaluated
+Best-so-far configuration:          28    mean value:    -2.737108732
+Description of the best-so-far configuration:
+   .ID.       c epsilon tol max_iter .PARENT.
+28   28 4682.51   63.93 0.5       61        5
+
+# 2021-10-24 16:03:07 ACDT: Extracting elites
+# 2021-10-24 16:03:07 ACDT: Elite configurations (first number is the configuration ID; listed from best to worst according to the sum of ranks):
+   .ID.       c epsilon  tol max_iter .PARENT. .ALIVE. .RANK. .WEIGHT.
+28   28 4682.51   63.93 0.50       61        5    TRUE  109.0      0.4
+1     1 9661.79   51.04 0.70       21       NA    TRUE  120.5      0.3
+2     2 7835.71   58.48 0.32      997       NA    TRUE  120.5      0.2
+4     4 7129.93   70.31 0.56      259       NA    TRUE  120.5      0.1
+# 2021-10-24 16:03:07 ACDT: End of iteration 2
+# 2021-10-24 16:03:07 ACDT: Iteration 3 of 4
+# experimentsUsedSoFar: 430
+# remainingBudget: 570
+# currentBudget: 285
+# nbConfigurations: 25
+# 2021-10-24 16:03:07 ACDT: Update model
+# 2021-10-24 16:03:07 ACDT: Sample 21 configurations from model
+# 2021-10-24 16:03:07 ACDT: Computing similarity of configurations ......................... DONE
+# 2021-10-24 16:03:07 ACDT: Launch race
+# Markers:
+     x No test is performed.
+     c Configurations are discarded only due to capping.
+     - The test is performed and some configurations are discarded.
+     = The test is performed but no configuration is discarded.
+     ! The test is performed and configurations could be discarded but elite configurations are preserved.
+     . All alive configurations are elite and nothing is discarded
+
++-+-----------+-----------+-----------+---------------+-----------+--------+-----+----+------+
+| |   Instance|      Alive|       Best|      Mean best| Exp so far|  W time|  rho|KenW|  Qvar|
++-+-----------+-----------+-----------+---------------+-----------+--------+-----+----+------+
+|x|          4|         25|         28|   -4.507024108|         21|00:00:07|   NA|  NA|    NA|
+|x|         10|         25|         28|   -6.773777481|         42|00:00:07|+1.00|1.00|0.0000|
+|x|          3|         25|         28|   -4.843986778|         63|00:00:08|+1.00|1.00|0.0000|
+|x|          8|         25|         28|   -3.905902196|         84|00:00:08|+1.00|1.00|0.0000|
+|x|          7|         25|         28|   -3.224721757|        105|00:00:07|+1.00|1.00|0.0000|
+|x|          6|         25|         28|   -2.770601464|        126|00:00:07|+1.00|1.00|0.0000|
+|x|          2|         25|         28|   -2.446229826|        147|00:00:08|+1.00|1.00|0.0000|
+|x|          5|         25|         28|   -3.224359897|        168|00:00:07|+0.00|0.12|12.6000|
+|x|          1|         25|         28|   -2.921653242|        189|00:00:07|+0.00|0.11|11.2000|
+|=|          9|         25|         28|   -2.737108732|        210|00:00:08|+0.00|0.10|10.0800|
++-+-----------+-----------+-----------+---------------+-----------+--------+-----+----+------+
+# Stopped because all instances (10) evaluated
+Best-so-far configuration:          28    mean value:    -2.737108732
+Description of the best-so-far configuration:
+   .ID.       c epsilon tol max_iter .PARENT.
+28   28 4682.51   63.93 0.5       61        5
+
+# 2021-10-24 16:04:26 ACDT: Extracting elites
+# 2021-10-24 16:04:26 ACDT: Elite configurations (first number is the configuration ID; listed from best to worst according to the sum of ranks):
+   .ID.       c epsilon  tol max_iter .PARENT. .ALIVE. .RANK. .WEIGHT.
+28   28 4682.51   63.93 0.50       61        5    TRUE  118.0      0.4
+1     1 9661.79   51.04 0.70       21       NA    TRUE  130.5      0.3
+2     2 7835.71   58.48 0.32      997       NA    TRUE  130.5      0.2
+4     4 7129.93   70.31 0.56      259       NA    TRUE  130.5      0.1
+# 2021-10-24 16:04:26 ACDT: End of iteration 3
+# 2021-10-24 16:04:26 ACDT: Iteration 4 of 4
+# experimentsUsedSoFar: 640
+# remainingBudget: 360
+# currentBudget: 360
+# nbConfigurations: 28
+# 2021-10-24 16:04:26 ACDT: Update model
+# 2021-10-24 16:04:26 ACDT: Sample 24 configurations from model
+# 2021-10-24 16:04:26 ACDT: Computing similarity of configurations ............................ DONE
+# 2021-10-24 16:04:26 ACDT: Launch race
+# Markers:
+     x No test is performed.
+     c Configurations are discarded only due to capping.
+     - The test is performed and some configurations are discarded.
+     = The test is performed but no configuration is discarded.
+     ! The test is performed and configurations could be discarded but elite configurations are preserved.
+     . All alive configurations are elite and nothing is discarded
+
++-+-----------+-----------+-----------+---------------+-----------+--------+-----+----+------+
+| |   Instance|      Alive|       Best|      Mean best| Exp so far|  W time|  rho|KenW|  Qvar|
++-+-----------+-----------+-----------+---------------+-----------+--------+-----+----+------+
+|x|          2|         28|         28|  -0.5000000000|         24|00:00:08|   NA|  NA|    NA|
+|x|          4|         28|         28|   -2.503512054|         48|00:00:08|+1.00|1.00|0.0000|
+|x|          9|         28|         28|   -2.027744083|         72|00:00:07|+1.00|1.00|0.0000|
+|x|          1|         28|         28|   -1.645808062|         96|00:00:10|+1.00|1.00|0.0000|
+|x|          6|         28|         28|   -1.416646450|        120|00:00:08|+1.00|1.00|0.0000|
+|x|         10|         28|         28|   -2.687293851|        144|00:00:07|+1.00|1.00|0.0000|
+|x|          5|         28|         28|   -3.542147642|        168|00:00:08|+0.00|0.14|3.1133|
+|x|          8|         28|         28|   -3.235835243|        192|00:00:07|+0.00|0.12|2.7241|
+|x|          3|         28|         28|   -2.985676369|        216|00:00:08|+0.00|0.11|2.4214|
+|=|          7|         28|         28|   -2.737108732|        240|00:00:08|+0.00|0.10|2.1793|
++-+-----------+-----------+-----------+---------------+-----------+--------+-----+----+------+
+# Stopped because all instances (10) evaluated
+Best-so-far configuration:          28    mean value:    -2.737108732
+Description of the best-so-far configuration:
+   .ID.       c epsilon tol max_iter .PARENT.
+28   28 4682.51   63.93 0.5       61        5
+
+# 2021-10-24 16:05:50 ACDT: Extracting elites
+# 2021-10-24 16:05:50 ACDT: Elite configurations (first number is the configuration ID; listed from best to worst according to the sum of ranks):
+   .ID.       c epsilon  tol max_iter .PARENT. .ALIVE. .RANK. .WEIGHT.
+28   28 4682.51   63.93 0.50       61        5    TRUE  131.5      0.4
+1     1 9661.79   51.04 0.70       21       NA    TRUE  145.0      0.3
+2     2 7835.71   58.48 0.32      997       NA    TRUE  145.0      0.2
+4     4 7129.93   70.31 0.56      259       NA    TRUE  145.0      0.1
+# 2021-10-24 16:05:50 ACDT: End of iteration 4
+# 2021-10-24 16:05:50 ACDT: Iteration 5 of 5
+# experimentsUsedSoFar: 880
+# remainingBudget: 120
+# currentBudget: 120
+# nbConfigurations: 10
+# 2021-10-24 16:05:50 ACDT: Update model
+# 2021-10-24 16:05:50 ACDT: Sample 6 configurations from model
+# 2021-10-24 16:05:50 ACDT: Computing similarity of configurations .......... DONE
+# 2021-10-24 16:05:50 ACDT: Launch race
+# Markers:
+     x No test is performed.
+     c Configurations are discarded only due to capping.
+     - The test is performed and some configurations are discarded.
+     = The test is performed but no configuration is discarded.
+     ! The test is performed and configurations could be discarded but elite configurations are preserved.
+     . All alive configurations are elite and nothing is discarded
+
++-+-----------+-----------+-----------+---------------+-----------+--------+-----+----+------+
+| |   Instance|      Alive|       Best|      Mean best| Exp so far|  W time|  rho|KenW|  Qvar|
++-+-----------+-----------+-----------+---------------+-----------+--------+-----+----+------+
+|x|          2|         10|         28|  -0.5000000000|          6|00:00:02|   NA|  NA|    NA|
+|x|          7|         10|         28|  -0.5000000000|         12|00:00:03|+1.00|1.00|0.0000|
+|x|          1|         10|         28|  -0.5000000000|         18|00:00:02|+1.00|1.00|0.0000|
+|x|          8|         10|         28|  -0.6479121129|         24|00:00:02|+1.00|1.00|0.0000|
+|x|          6|         10|         28|  -0.6183296903|         30|00:00:02|+1.00|1.00|0.0000|
+|x|          3|         10|         28|  -0.6793423038|         36|00:00:02|+1.00|1.00|0.0000|
+|x|          9|         10|         28|  -0.7360374233|         42|00:00:02|+1.00|1.00|0.0000|
+|x|         10|         10|         28|   -1.774099102|         48|00:00:02|+1.00|1.00|0.0000|
+|x|          5|         10|         28|   -2.540451468|         54|00:00:02|+0.00|0.11|0.1000|
+|=|          4|         10|         28|   -2.737108732|         60|00:00:02|+0.00|0.10|0.0900|
++-+-----------+-----------+-----------+---------------+-----------+--------+-----+----+------+
+# Stopped because all instances (10) evaluated
+Best-so-far configuration:          28    mean value:    -2.737108732
+Description of the best-so-far configuration:
+   .ID.       c epsilon tol max_iter .PARENT.
+28   28 4682.51   63.93 0.5       61        5
+
+# 2021-10-24 16:06:15 ACDT: Extracting elites
+# 2021-10-24 16:06:15 ACDT: Elite configurations (first number is the configuration ID; listed from best to worst according to the sum of ranks):
+   .ID.       c epsilon  tol max_iter .PARENT. .ALIVE. .RANK. .WEIGHT.
+28   28 4682.51   63.93 0.50       61        5    TRUE   50.5      0.4
+1     1 9661.79   51.04 0.70       21       NA    TRUE   55.5      0.3
+2     2 7835.71   58.48 0.32      997       NA    TRUE   55.5      0.2
+4     4 7129.93   70.31 0.56      259       NA    TRUE   55.5      0.1
+# 2021-10-24 16:06:15 ACDT: End of iteration 5
+# 2021-10-24 16:06:15 ACDT: Iteration 6 of 6
+# experimentsUsedSoFar: 940
+# remainingBudget: 60
+# currentBudget: 60
+# nbConfigurations: 6
+# 2021-10-24 16:06:15 ACDT: Update model
+# 2021-10-24 16:06:15 ACDT: Sample 2 configurations from model
+# 2021-10-24 16:06:15 ACDT: Computing similarity of configurations ...... DONE
+# 2021-10-24 16:06:15 ACDT: Launch race
+# Markers:
+     x No test is performed.
+     c Configurations are discarded only due to capping.
+     - The test is performed and some configurations are discarded.
+     = The test is performed but no configuration is discarded.
+     ! The test is performed and configurations could be discarded but elite configurations are preserved.
+     . All alive configurations are elite and nothing is discarded
+
++-+-----------+-----------+-----------+---------------+-----------+--------+-----+----+------+
+| |   Instance|      Alive|       Best|      Mean best| Exp so far|  W time|  rho|KenW|  Qvar|
++-+-----------+-----------+-----------+---------------+-----------+--------+-----+----+------+
+|x|          9|          6|         28|   -1.076208141|          2|00:00:00|   NA|  NA|    NA|
+|x|          1|          6|         28|  -0.7881040704|          4|00:00:00|+1.00|1.00|0.0000|
+|x|          3|          6|         28|  -0.8535378373|          6|00:00:01|+1.00|1.00|0.0000|
+|x|          8|          6|         28|  -0.9130654909|          8|00:00:00|+1.00|1.00|0.0000|
+|x|         10|          6|         28|   -2.538558564|         10|00:00:01|+1.00|1.00|0.0000|
+|x|          7|          6|         28|   -2.198798803|         12|00:00:01|+1.00|1.00|0.0000|
+|x|          5|          6|         28|   -3.123437601|         14|00:00:00|+0.00|0.14|0.5952|
+|x|          4|          6|         28|   -3.296385915|         16|00:00:00|+0.00|0.12|0.5208|
+|x|          2|          6|         28|   -2.985676369|         18|00:00:00|+0.00|0.11|0.4630|
+|=|          6|          6|         28|   -2.737108732|         20|00:00:00|+0.00|0.10|0.4167|
++-+-----------+-----------+-----------+---------------+-----------+--------+-----+----+------+
+# Stopped because all instances (10) evaluated
+Best-so-far configuration:          28    mean value:    -2.737108732
+Description of the best-so-far configuration:
+   .ID.       c epsilon tol max_iter .PARENT.
+28   28 4682.51   63.93 0.5       61        5
+
+# 2021-10-24 16:06:25 ACDT: Extracting elites
+# 2021-10-24 16:06:25 ACDT: Elite configurations (first number is the configuration ID; listed from best to worst according to the sum of ranks):
+   .ID.       c epsilon  tol max_iter .PARENT. .ALIVE. .RANK. .WEIGHT.
+28   28 4682.51   63.93 0.50       61        5    TRUE   32.5      0.4
+1     1 9661.79   51.04 0.70       21       NA    TRUE   35.5      0.3
+2     2 7835.71   58.48 0.32      997       NA    TRUE   35.5      0.2
+4     4 7129.93   70.31 0.56      259       NA    TRUE   35.5      0.1
+# 2021-10-24 16:06:25 ACDT: End of iteration 6
+# 2021-10-24 16:06:25 ACDT: Iteration 7 of 7
+# experimentsUsedSoFar: 960
+# remainingBudget: 40
+# currentBudget: 40
+# nbConfigurations: 5
+# 2021-10-24 16:06:25 ACDT: Update model
+# 2021-10-24 16:06:25 ACDT: Sample 1 configurations from model
+# 2021-10-24 16:06:25 ACDT: Computing similarity of configurations ..... DONE
+# 2021-10-24 16:06:25 ACDT: Launch race
+# Markers:
+     x No test is performed.
+     c Configurations are discarded only due to capping.
+     - The test is performed and some configurations are discarded.
+     = The test is performed but no configuration is discarded.
+     ! The test is performed and configurations could be discarded but elite configurations are preserved.
+     . All alive configurations are elite and nothing is discarded
+
++-+-----------+-----------+-----------+---------------+-----------+--------+-----+----+------+
+| |   Instance|      Alive|       Best|      Mean best| Exp so far|  W time|  rho|KenW|  Qvar|
++-+-----------+-----------+-----------+---------------+-----------+--------+-----+----+------+
+|x|          8|          5|         28|   -1.091648452|          1|00:00:00|   NA|  NA|    NA|
+|x|          7|          5|         28|  -0.7958242258|          2|00:00:00|+1.00|1.00|0.0000|
+|x|          4|          5|         28|   -2.032890853|          3|00:00:00|+1.00|1.00|0.0000|
+|x|          9|          5|         28|   -1.793720175|          4|00:00:00|+1.00|1.00|0.0000|
+|x|          6|          5|         28|   -1.534976140|          5|00:00:00|+1.00|1.00|0.0000|
+|x|          2|          5|         28|   -1.362480117|          6|00:00:00|+1.00|1.00|0.0000|
+|x|          5|          5|         28|   -2.406593013|          7|00:00:00|+0.00|0.14|0.4571|
+|x|         10|          5|         28|   -3.235835243|          8|00:00:00|+0.00|0.12|0.4000|
+|x|          1|          5|         28|   -2.931853550|          9|00:00:00|+0.00|0.11|0.3556|
+|=|          3|          5|         28|   -2.737108732|         10|00:00:00|+0.00|0.10|0.3200|
++-+-----------+-----------+-----------+---------------+-----------+--------+-----+----+------+
+# Stopped because all instances (10) evaluated
+Best-so-far configuration:          28    mean value:    -2.737108732
+Description of the best-so-far configuration:
+   .ID.       c epsilon tol max_iter .PARENT.
+28   28 4682.51   63.93 0.5       61        5
+
+# 2021-10-24 16:06:33 ACDT: Extracting elites
+# 2021-10-24 16:06:33 ACDT: Elite configurations (first number is the configuration ID; listed from best to worst according to the sum of ranks):
+   .ID.       c epsilon  tol max_iter .PARENT. .ALIVE. .RANK. .WEIGHT.
+28   28 4682.51   63.93 0.50       61        5    TRUE   28.0      0.4
+1     1 9661.79   51.04 0.70       21       NA    TRUE   30.5      0.3
+2     2 7835.71   58.48 0.32      997       NA    TRUE   30.5      0.2
+4     4 7129.93   70.31 0.56      259       NA    TRUE   30.5      0.1
+# 2021-10-24 16:06:33 ACDT: End of iteration 7
+# 2021-10-24 16:06:33 ACDT: Stopped because there is not enough budget left to race more than the minimum (4)
+# You may either increase the budget or set 'minNbSurvival' to a lower value
+# Iteration: 8
+# nbIterations: 8
+# experimentsUsedSoFar: 970
+# timeUsed: 0
+# remainingBudget: 30
+# currentBudget: 30
+# number of elites: 4
+# nbConfigurations: 4
+# Best configurations (first number is the configuration ID; listed from best to worst according to the sum of ranks):
+         c epsilon  tol max_iter
+28 4682.51   63.93 0.50       61
+1  9661.79   51.04 0.70       21
+2  7835.71   58.48 0.32      997
+4  7129.93   70.31 0.56      259
+# Best configurations as commandlines (first number is the configuration ID; same order as above):
+28  --c 4682.51 --epi 63.93 --cs 0.5 --iter 61
+1   --c 9661.79 --epi 51.04 --cs 0.7 --iter 21
+2   --c 7835.71 --epi 58.48 --cs 0.32 --iter 997
+4   --c 7129.93 --epi 70.31 --cs 0.56 --iter 259
+ 
+
+# 2021-10-24 16:06:33 ACDT: Testing configurations (in no particular order): 1 28
+         c epsilon tol max_iter
+1  9661.79   51.04 0.7       21
+28 4682.51   63.93 0.5       61
+# Testing of elite configurations: 1 
+# Testing iteration configurations: TRUE 
+# 0 expression(s) specifying forbidden configurations read from '/Users/suzanneong/Desktop/Topics/SupportVectorRegression/forbidden.txt'
+# 2021-10-24 16:06:40 ACDT: Testing results (column number is configuration ID in no particular order):
+             1         28
+1t  -9.0405309 -9.0405309
+2t  -0.5000000 -0.5000000
+3t  -0.9844054 -0.9844054
+4t  -0.5000000 -0.5000000
+5t  -4.5070241 -4.5070241
+6t  -0.5000000 -0.5000000
+7t  -0.5000000 -0.5000000
+8t  -8.6712704 -8.6712704
+9t  -1.0762081 -1.0762081
+10t -1.0916485 -1.0916485
+# 2021-10-24 16:06:40 ACDT: Finished testing
+[1m[7m%[27m[1m[0m                                                                                                                                 ]7;file://Sushis-MacBook.local/Users/suzanneong/Desktop/Topics/SupportVectorRegression[0m[27m[24m[J(base) suzanneong@Sushis-MacBook SupportVectorRegression % [K[?2004heexit[?2004l
+Saving session...
+...saving history...truncating history files...
+...completed.
+
+Script done on Sun Oct 24 16:08:02 2021

@@ -1,0 +1,1 @@
+['./main.py', '-v', '--num', '150', '--dep', '1', '--jobs', '11', '--ver', '4', '--ins', '29t', '--i', '../Datasets/nguyen-9.test.csv', '--s', '1864587272', '--datfile', 'c80-29t.dat']

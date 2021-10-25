@@ -1,0 +1,244 @@
+Script started on Sun Oct 24 16:54:12 2021
+Restored session: Sun 24 Oct 2021 16:30:15 ACDT
+[1m[7m%[27m[1m[0m                                                                                                                                 ]7;file://Sushis-MacBook.local/Users/suzanneong/Desktop/Topics/RandomForest[0m[27m[24m[J(base) suzanneong@Sushis-MacBook RandomForest % [K[?2004hexitirace --debug-level 1     [26Dexit                 [17Dirace --debug-level 1     [?2004l
+#------------------------------------------------------------------------------
+# irace: An implementation in R of (Elitist) Iterated Racing
+# Version: 3.4.1.9fcaeaf
+# Copyright (C) 2010-2020
+# Manuel Lopez-Ibanez     <manuel.lopez-ibanez@manchester.ac.uk>
+# Jeremie Dubois-Lacoste  
+# Leslie Perez Caceres    <leslie.perez.caceres@ulb.ac.be>
+#
+# This is free software, and you are welcome to redistribute it under certain
+# conditions.  See the GNU General Public License for details. There is NO
+# WARRANTY; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+#
+# irace builds upon previous code from the race package:
+#     race: Racing methods for the selection of the best
+#     Copyright (C) 2003 Mauro Birattari
+#------------------------------------------------------------------------------
+# installed at: /Library/Frameworks/R.framework/Versions/4.1-arm64/Resources/library/irace
+# called with: --debug-level 1
+Warning: A default scenario file './scenario.txt' has been found and will be read
+# 0 expression(s) specifying forbidden configurations read from '/Users/suzanneong/Desktop/Topics/RandomForest/forbidden.txt'
+Warning: Assuming 'mu = firstTest' because 'mu' cannot be lower than 'firstTest'
+## irace scenario:
+scenarioFile = "./scenario.txt"
+parameterFile = "/Users/suzanneong/Desktop/Topics/RandomForest/parameters.txt"
+execDir = "/Users/suzanneong/Desktop/Topics/RandomForest"
+logFile = "/Users/suzanneong/Desktop/Topics/RandomForest/irace.Rdata"
+recoveryFile = NULL
+instances = c("/Users/suzanneong/Desktop/Topics/RandomForest/../Datasets/feynman_III_10_19.csv", "/Users/suzanneong/Desktop/Topics/RandomForest/../Datasets/feynman_III_13_18.csv", "/Users/suzanneong/Desktop/Topics/RandomForest/../Datasets/feynman_III_14_14.csv", "/Users/suzanneong/Desktop/Topics/RandomForest/../Datasets/feynman_III_15_12.csv", "/Users/suzanneong/Desktop/Topics/RandomForest/../Datasets/feynman_III_15_14.csv", "/Users/suzanneong/Desktop/Topics/RandomForest/../Datasets/feynman_III_15_27.csv", "/Users/suzanneong/Desktop/Topics/RandomForest/../Datasets/feynman_III_17_37.csv", "/Users/suzanneong/Desktop/Topics/RandomForest/../Datasets/feynman_III_19_51.csv", "/Users/suzanneong/Desktop/Topics/RandomForest/../Datasets/feynman_III_21_20.csv", "/Users/suzanneong/Desktop/Topics/RandomForest/../Datasets/feynman_III_4_32.csv", "/Users/suzanneong/Desktop/Topics/RandomForest/../Datasets/feynman_III_4_33.csv", "/Users/suzanneong/Desktop/Topics/RandomForest/../Datasets/feynman_III_7_38.csv", "/Users/suzanneong/Desktop/Topics/RandomForest/../Datasets/feynman_III_8_54.csv", "/Users/suzanneong/Desktop/Topics/RandomForest/../Datasets/feynman_III_9_52.csv", "/Users/suzanneong/Desktop/Topics/RandomForest/../Datasets/feynman_II_10_9.csv", "/Users/suzanneong/Desktop/Topics/RandomForest/../Datasets/feynman_II_11_20.csv", "/Users/suzanneong/Desktop/Topics/RandomForest/../Datasets/feynman_II_11_27.csv", "/Users/suzanneong/Desktop/Topics/RandomForest/../Datasets/feynman_II_11_3.csv", "/Users/suzanneong/Desktop/Topics/RandomForest/../Datasets/feynman_II_13_17.csv", "/Users/suzanneong/Desktop/Topics/RandomForest/../Datasets/feynman_II_13_23.csv", "/Users/suzanneong/Desktop/Topics/RandomForest/../Datasets/feynman_II_34_29a.csv", "/Users/suzanneong/Desktop/Topics/RandomForest/../Datasets/feynman_II_34_29b.csv", "/Users/suzanneong/Desktop/Topics/RandomForest/../Datasets/feynman_I_29_16.csv", "/Users/suzanneong/Desktop/Topics/RandomForest/../Datasets/feynman_I_30_5.csv", "/Users/suzanneong/Desktop/Topics/RandomForest/../Datasets/feynman_I_32_17.csv", "/Users/suzanneong/Desktop/Topics/RandomForest/../Datasets/feynman_I_50_26.csv", "/Users/suzanneong/Desktop/Topics/RandomForest/../Datasets/feynman_test_11.csv", "/Users/suzanneong/Desktop/Topics/RandomForest/../Datasets/feynman_test_12.csv", "/Users/suzanneong/Desktop/Topics/RandomForest/../Datasets/feynman_test_13.csv", "/Users/suzanneong/Desktop/Topics/RandomForest/../Datasets/feynman_test_7.csv")
+initConfigurations = NULL
+trainInstancesDir = "/Users/suzanneong/Desktop/Topics/RandomForest"
+trainInstancesFile = "/Users/suzanneong/Desktop/Topics/Al.txt"
+configurationsFile = ""
+forbiddenExps = NULL = expression()
+forbiddenFile = "/Users/suzanneong/Desktop/Topics/RandomForest/forbidden.txt"
+targetRunner = "/Users/suzanneong/Desktop/Topics/RandomForest/target-runner"
+targetRunnerRetries = 0
+targetRunnerData = ""
+targetRunnerParallel = NULL
+targetEvaluator = NULL
+maxExperiments = 1000
+maxTime = 0
+budgetEstimation = 0.02
+digits = 2
+debugLevel = 1
+nbIterations = 0
+nbExperimentsPerIteration = 0
+sampleInstances = TRUE
+testType = "friedman"
+firstTest = 10
+eachTest = 1
+minNbSurvival = 0
+nbConfigurations = 0
+mu = 10
+confidence = 0.95
+deterministic = TRUE
+seed = 1000
+parallel = 4
+loadBalancing = FALSE
+mpi = FALSE
+batchmode = "0"
+softRestart = TRUE
+softRestartThreshold = 0.01
+testInstancesDir = ""
+testInstancesFile = "/Users/suzanneong/Desktop/Topics/Al.txt"
+testInstances = c("1t" = "../Datasets/feynman_III_10_19.csv", "2t" = "../Datasets/feynman_III_13_18.csv", "3t" = "../Datasets/feynman_III_14_14.csv", "4t" = "../Datasets/feynman_III_15_12.csv", "5t" = "../Datasets/feynman_III_15_14.csv", "6t" = "../Datasets/feynman_III_15_27.csv", "7t" = "../Datasets/feynman_III_17_37.csv", "8t" = "../Datasets/feynman_III_19_51.csv", "9t" = "../Datasets/feynman_III_21_20.csv", "10t" = "../Datasets/feynman_III_4_32.csv", "11t" = "../Datasets/feynman_III_4_33.csv", "12t" = "../Datasets/feynman_III_7_38.csv", "13t" = "../Datasets/feynman_III_8_54.csv", "14t" = "../Datasets/feynman_III_9_52.csv", "15t" = "../Datasets/feynman_II_10_9.csv", "16t" = "../Datasets/feynman_II_11_20.csv", "17t" = "../Datasets/feynman_II_11_27.csv", "18t" = "../Datasets/feynman_II_11_3.csv", "19t" = "../Datasets/feynman_II_13_17.csv", "20t" = "../Datasets/feynman_II_13_23.csv", "21t" = "../Datasets/feynman_II_34_29a.csv", "22t" = "../Datasets/feynman_II_34_29b.csv", "23t" = "../Datasets/feynman_I_29_16.csv", "24t" = "../Datasets/feynman_I_30_5.csv", "25t" = "../Datasets/feynman_I_32_17.csv", "26t" = "../Datasets/feynman_I_50_26.csv", "27t" = "../Datasets/feynman_test_11.csv", "28t" = "../Datasets/feynman_test_12.csv", "29t" = "../Datasets/feynman_test_13.csv", "30t" = "../Datasets/feynman_test_7.csv")
+testNbElites = 1
+testIterationElites = TRUE
+elitist = TRUE
+elitistNewInstances = 1
+elitistLimit = 2
+repairConfiguration = NULL
+capping = FALSE
+cappingType = "median"
+boundType = "candidate"
+boundMax = NULL
+boundDigits = 0
+boundPar = 1
+boundAsTimeout = TRUE
+postselection = 0
+aclib = FALSE
+## end of irace scenario
+# --- Parameters Hierarchy ---
+[1] "number"  "depth"   "jobs"    "verbose"
+ number   depth    jobs verbose 
+      1       1       1       1 
+ number   depth    jobs verbose 
+     ""      ""      ""      "" 
+  Parameter Level Depends.on
+1    number     1           
+2     depth     1           
+3      jobs     1           
+4   verbose     1           
+
+# ------------------------
+# 0 expression(s) specifying forbidden configurations read from '/Users/suzanneong/Desktop/Topics/RandomForest/forbidden.txt'
+# 2021-10-24 16:54:15 ACDT: Initialization
+# Elitist race
+# Elitist new instances: 1
+# Elitist limit: 2
+# nbIterations: 4
+# minNbSurvival: 4
+# nbParameters: 4
+# seed: 1000
+# confidence level: 0.95
+# budget: 1000
+# mu: 10
+# deterministic: TRUE
+
+# 2021-10-24 16:54:15 ACDT: Iteration 1 of 4
+# experimentsUsedSoFar: 0
+# remainingBudget: 1000
+# currentBudget: 250
+# nbConfigurations: 22
+# 2021-10-24 16:54:15 ACDT: Sample 22 configurations from uniform distribution
+# 2021-10-24 16:54:15 ACDT: Launch race
+# Markers:
+     x No test is performed.
+     c Configurations are discarded only due to capping.
+     - The test is performed and some configurations are discarded.
+     = The test is performed but no configuration is discarded.
+     ! The test is performed and configurations could be discarded but elite configurations are preserved.
+     . All alive configurations are elite and nothing is discarded
+
++-+-----------+-----------+-----------+---------------+-----------+--------+-----+----+------+
+| |   Instance|      Alive|       Best|      Mean best| Exp so far|  W time|  rho|KenW|  Qvar|
++-+-----------+-----------+-----------+---------------+-----------+--------+-----+----+------+
+|x|          1|         22|          7|   -6.178337206|         22|00:05:38|   NA|  NA|    NA|
+|x|          2|         22|          7|   -5.432525555|         44|00:03:30|+0.98|0.99|0.0779|
+|x|          3|         22|          7|   -4.864335372|         66|00:04:23|+0.99|0.99|0.0889|
+|x|          4|         22|          7|   -53.83717724|         88|00:05:25|+0.99|0.99|0.0618|
+|x|          5|         22|          7|   -43.07381337|        110|00:04:37|+0.98|0.98|0.0501|
+|x|          6|         22|          7|   -35.90938951|        132|00:04:10|+0.98|0.98|0.0429|
+|x|          7|         22|          7|   -31.72034497|        154|00:06:39|+0.98|0.99|0.0363|
+|x|          8|         22|          7|   -27.76892889|        176|00:05:51|+0.99|0.99|0.0314|
+|x|          9|         22|          7|   -24.78153476|        198|00:04:31|+0.99|0.99|0.0278|
+|-|         10|          1|          7|   -22.52854739|        220|00:03:43|   NA|  NA|    NA|
++-+-----------+-----------+-----------+---------------+-----------+--------+-----+----+------+
+# Stopped because number of alive configurations (1) <= minimum number of configurations (4)
+Best-so-far configuration:           7    mean value:    -22.52854739
+Description of the best-so-far configuration:
+  .ID. number depth jobs verbose .PARENT.
+7    7     98     1   15       6       NA
+
+# 2021-10-24 17:42:49 ACDT: Extracting elites
+# 2021-10-24 17:42:49 ACDT: Elite configurations (first number is the configuration ID; listed from best to worst according to the sum of ranks):
+  .ID. number depth jobs verbose .PARENT. .ALIVE. .RANK. .WEIGHT.
+7    7     98     1   15       6       NA    TRUE      1        1
+# 2021-10-24 17:42:49 ACDT: Initialise model
+# 2021-10-24 17:42:49 ACDT: End of iteration 1
+# 2021-10-24 17:42:49 ACDT: Iteration 2 of 4
+# experimentsUsedSoFar: 220
+# remainingBudget: 780
+# currentBudget: 260
+# nbConfigurations: 22
+# 2021-10-24 17:42:49 ACDT: Update model
+# 2021-10-24 17:42:49 ACDT: Sample 21 configurations from model
+# 2021-10-24 17:42:49 ACDT: Computing similarity of configurations ...................... DONE
+# 2021-10-24 17:42:49 ACDT: Launch race
+# Markers:
+     x No test is performed.
+     c Configurations are discarded only due to capping.
+     - The test is performed and some configurations are discarded.
+     = The test is performed but no configuration is discarded.
+     ! The test is performed and configurations could be discarded but elite configurations are preserved.
+     . All alive configurations are elite and nothing is discarded
+
++-+-----------+-----------+-----------+---------------+-----------+--------+-----+----+------+
+| |   Instance|      Alive|       Best|      Mean best| Exp so far|  W time|  rho|KenW|  Qvar|
++-+-----------+-----------+-----------+---------------+-----------+--------+-----+----+------+
+|x|         11|         22|         42|  -0.3528898104|         22|00:00:43|   NA|  NA|    NA|
+|x|          9|         22|         23|  -0.6178044632|         43|00:00:54|+0.95|0.98|0.1054|
+|x|          2|         22|         42|   -1.974078916|         64|00:00:43|+0.97|0.98|0.1000|
+|x|          3|         22|         39|   -2.412552654|         85|00:00:54|+0.97|0.97|0.1371|
+|x|          5|         22|         39|   -1.934114419|        106|00:00:53|+0.96|0.97|0.1114|
+|x|          6|         22|         23|   -1.621236136|        127|00:00:42|+0.96|0.97|0.0974|
+|x|          7|         22|         39|   -2.335003526|        148|00:01:02|+0.97|0.97|0.0826|
+|x|         10|         22|         23|   -2.323546892|        169|00:00:42|+0.97|0.97|0.0752|
+|x|          1|         22|         39|   -2.752021067|        190|00:01:04|+0.97|0.97|0.0663|
+|-|          4|          5|         23|   -22.55420612|        211|00:01:01|-0.06|0.04|0.8758|
+|=|          8|          5|         42|   -20.51468675|        215|00:00:03|-0.09|0.01|0.8714|
+|=|         12|          5|         39|   -18.81474382|        220|00:00:03|-0.07|0.02|0.8681|
++-+-----------+-----------+-----------+---------------+-----------+--------+-----+----+------+
+# Stopped because tests without elimination (2) >= elitistLimit (2)
+Best-so-far configuration:          39    mean value:    -18.81474382
+Description of the best-so-far configuration:
+   .ID. number depth jobs verbose .PARENT.
+39   39    174     1   10       8        7
+
+# 2021-10-24 17:51:40 ACDT: Extracting elites
+# 2021-10-24 17:51:40 ACDT: Elite configurations (first number is the configuration ID; listed from best to worst according to the sum of ranks):
+   .ID. number depth jobs verbose .PARENT. .ALIVE. .RANK. .WEIGHT.
+39   39    174     1   10       8        7    TRUE     34      0.4
+23   23     54     1   18       5        7    TRUE     35      0.3
+42   42     71     1   16       6        7    TRUE     35      0.2
+7     7     98     1   15       6       NA    TRUE     36      0.1
+# 2021-10-24 17:51:40 ACDT: End of iteration 2
+# 2021-10-24 17:51:40 ACDT: Iteration 3 of 4
+# experimentsUsedSoFar: 440
+# remainingBudget: 560
+# currentBudget: 280
+# nbConfigurations: 25
+# 2021-10-24 17:51:40 ACDT: Update model
+# 2021-10-24 17:51:40 ACDT: Sample 21 configurations from model
+# 2021-10-24 17:51:40 ACDT: Computing similarity of configurations ......................... DONE
+# 2021-10-24 17:51:40 ACDT: Launch race
+# Markers:
+     x No test is performed.
+     c Configurations are discarded only due to capping.
+     - The test is performed and some configurations are discarded.
+     = The test is performed but no configuration is discarded.
+     ! The test is performed and configurations could be discarded but elite configurations are preserved.
+     . All alive configurations are elite and nothing is discarded
+
++-+-----------+-----------+-----------+---------------+-----------+--------+-----+----+------+
+| |   Instance|      Alive|       Best|      Mean best| Exp so far|  W time|  rho|KenW|  Qvar|
++-+-----------+-----------+-----------+---------------+-----------+--------+-----+----+------+
+|x|         13|         25|         58|   -4.766277375|         25|00:00:39|   NA|  NA|    NA|
+|x|          6|         25|         23|   -2.425320204|         46|00:00:28|+0.90|0.95|0.0006|
+|x|          7|         25|         23|   -3.809417092|         67|00:00:37|+0.88|0.92|0.0224|
+|x|         10|         25|         23|   -3.427899682|         88|00:00:29|+0.90|0.93|0.0172|
+|x|          5|         25|         23|   -2.746394618|        109|00:00:36|+0.91|0.93|0.0137|
+|x|          2|         25|         23|   -3.069532246|        130|00:00:27|+0.90|0.92|0.0258|
+|x|          4|         25|         23|   -31.31332432|        151|00:00:40|+0.91|0.92|0.0219|
+|x|          8|         25|         23|   -27.41278230|        172|00:00:40|+0.90|0.91|0.0195|
+Error : == irace == running command ''/Users/suzanneong/Desktop/Topics/RandomForest/target-runner' 53 13 563392370 /Users/suzanneong/Desktop/Topics/RandomForest/../Datasets/feynman_III_8_54.csv   --num 148 --dep 5 --jobs 19 --ver 7 2>&1' had status 1
+== irace == The call to targetRunner was:
+/Users/suzanneong/Desktop/Topics/RandomForest/target-runner 53 13 563392370 /Users/suzanneong/Desktop/Topics/RandomForest/../Datasets/feynman_III_8_54.csv   --num 148 --dep 5 --jobs 19 --ver 7
+== irace == The output was:
+/Users/suzanneong/Desktop/Topics/RandomForest/target-runner: line 41: 98442 Trace/BPT trap: 5       python3 $EXE -v ${CONFIG_PARAMS} --ins ${INSTANCE_ID} --i ${INSTANCE} --s ${SEED} --datfile ${DAT_FILE} > ${LOGS} 2>&1
+Sun 24 Oct 2021 07:26:32 UTC: error: c53-13.dat: No such file or directory
+== irace == This is not a bug in irace, but means that something failed when running the command(s) above or they were terminated before completion. Try to run the command(s) above from the execution directory '/Users/suzanneong/Desktop/Topics/RandomForest' to investigate the issue. See also Appendix B (targetRunner troubleshooting checklist) of the User Guide (https://cran.r-project.org/package=irace/vignettes/irace-package.pdf).
+Error: == irace == A child process triggered a fatal error
+In addition: Warning message:
+In parallel::mclapply(experiments, exec.target.runner, mc.preschedule = !scenario$loadBalancing,  :
+  scheduled core 2 encountered error in user code, all values of the job will be affected
+[1m[7m%[27m[1m[0m                                                                                                                                 ]7;file://Sushis-MacBook.local/Users/suzanneong/Desktop/Topics/RandomForest[0m[27m[24m[J(base) suzanneong@Sushis-MacBook RandomForest % [K[?2004heece exit[?2004l
+Saving session...
+...saving history...truncating history files...
+...completed.
+
+Script done on Sun Oct 24 18:16:42 2021

@@ -1,0 +1,10 @@
+## C = Strength of the regularization
+## Epsilon = Max Epsilon
+## tol = Tolerance for stopping criterion
+## Max Iter = Max iterations
+
+# 1:            2:           3: 4:       5:
+c             "--c "         r  (0.1, 10000)
+epsilon       "--epi "       r  (0.1, 100)
+tol          "--cs "        r  (0.001,1.0)
+max_iter      "--iter "      i  (1, 1000)

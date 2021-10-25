@@ -1,0 +1,475 @@
+Script started on Sun Oct 24 18:18:15 2021
+Restored session: Sun 24 Oct 2021 18:16:42 ACDT
+[1m[7m%[27m[1m[0m                                                                                                                                 ]7;file://Sushis-MacBook.local/Users/suzanneong/Desktop/Topics/RandomForest[0m[27m[24m[J(base) suzanneong@Sushis-MacBook RandomForest % [K[?2004hexit    exitirace --debug-level 1     [26Dexit                 [17Dirace --debug-level 1     [?2004l
+#------------------------------------------------------------------------------
+# irace: An implementation in R of (Elitist) Iterated Racing
+# Version: 3.4.1.9fcaeaf
+# Copyright (C) 2010-2020
+# Manuel Lopez-Ibanez     <manuel.lopez-ibanez@manchester.ac.uk>
+# Jeremie Dubois-Lacoste  
+# Leslie Perez Caceres    <leslie.perez.caceres@ulb.ac.be>
+#
+# This is free software, and you are welcome to redistribute it under certain
+# conditions.  See the GNU General Public License for details. There is NO
+# WARRANTY; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+#
+# irace builds upon previous code from the race package:
+#     race: Racing methods for the selection of the best
+#     Copyright (C) 2003 Mauro Birattari
+#------------------------------------------------------------------------------
+# installed at: /Library/Frameworks/R.framework/Versions/4.1-arm64/Resources/library/irace
+# called with: --debug-level 1
+Warning: A default scenario file './scenario.txt' has been found and will be read
+# 0 expression(s) specifying forbidden configurations read from '/Users/suzanneong/Desktop/Topics/RandomForest/forbidden.txt'
+Warning: Assuming 'mu = firstTest' because 'mu' cannot be lower than 'firstTest'
+## irace scenario:
+scenarioFile = "./scenario.txt"
+parameterFile = "/Users/suzanneong/Desktop/Topics/RandomForest/parameters.txt"
+execDir = "/Users/suzanneong/Desktop/Topics/RandomForest"
+logFile = "/Users/suzanneong/Desktop/Topics/RandomForest/irace.Rdata"
+recoveryFile = NULL
+instances = c("/Users/suzanneong/Desktop/Topics/RandomForest/../Datasets/strogatz_bacres2.csv", "/Users/suzanneong/Desktop/Topics/RandomForest/../Datasets/strogatz_barmag1.csv", "/Users/suzanneong/Desktop/Topics/RandomForest/../Datasets/strogatz_barmag2.csv", "/Users/suzanneong/Desktop/Topics/RandomForest/../Datasets/strogatz_glider1.csv", "/Users/suzanneong/Desktop/Topics/RandomForest/../Datasets/strogatz_glider2.csv", "/Users/suzanneong/Desktop/Topics/RandomForest/../Datasets/strogatz_lv1.csv", "/Users/suzanneong/Desktop/Topics/RandomForest/../Datasets/strogatz_lv2.csv", "/Users/suzanneong/Desktop/Topics/RandomForest/../Datasets/strogatz_vdp1.csv", "/Users/suzanneong/Desktop/Topics/RandomForest/../Datasets/strogatz_vdp2.csv", "/Users/suzanneong/Desktop/Topics/RandomForest/../Datasets/strogatz_shearflow1.csv")
+initConfigurations = NULL
+trainInstancesDir = "/Users/suzanneong/Desktop/Topics/RandomForest"
+trainInstancesFile = "/Users/suzanneong/Desktop/Topics/St.txt"
+configurationsFile = ""
+forbiddenExps = NULL = expression()
+forbiddenFile = "/Users/suzanneong/Desktop/Topics/RandomForest/forbidden.txt"
+targetRunner = "/Users/suzanneong/Desktop/Topics/RandomForest/target-runner"
+targetRunnerRetries = 0
+targetRunnerData = ""
+targetRunnerParallel = NULL
+targetEvaluator = NULL
+maxExperiments = 1000
+maxTime = 0
+budgetEstimation = 0.02
+digits = 2
+debugLevel = 1
+nbIterations = 0
+nbExperimentsPerIteration = 0
+sampleInstances = TRUE
+testType = "friedman"
+firstTest = 10
+eachTest = 1
+minNbSurvival = 0
+nbConfigurations = 0
+mu = 10
+confidence = 0.95
+deterministic = TRUE
+seed = 1000
+parallel = 4
+loadBalancing = FALSE
+mpi = FALSE
+batchmode = "0"
+softRestart = TRUE
+softRestartThreshold = 0.01
+testInstancesDir = ""
+testInstancesFile = "/Users/suzanneong/Desktop/Topics/St.txt"
+testInstances = c("1t" = "../Datasets/strogatz_bacres2.csv", "2t" = "../Datasets/strogatz_barmag1.csv", "3t" = "../Datasets/strogatz_barmag2.csv", "4t" = "../Datasets/strogatz_glider1.csv", "5t" = "../Datasets/strogatz_glider2.csv", "6t" = "../Datasets/strogatz_lv1.csv", "7t" = "../Datasets/strogatz_lv2.csv", "8t" = "../Datasets/strogatz_vdp1.csv", "9t" = "../Datasets/strogatz_vdp2.csv", "10t" = "../Datasets/strogatz_shearflow1.csv")
+testNbElites = 1
+testIterationElites = TRUE
+elitist = TRUE
+elitistNewInstances = 1
+elitistLimit = 2
+repairConfiguration = NULL
+capping = FALSE
+cappingType = "median"
+boundType = "candidate"
+boundMax = NULL
+boundDigits = 0
+boundPar = 1
+boundAsTimeout = TRUE
+postselection = 0
+aclib = FALSE
+## end of irace scenario
+# --- Parameters Hierarchy ---
+[1] "number"  "depth"   "jobs"    "verbose"
+ number   depth    jobs verbose 
+      1       1       1       1 
+ number   depth    jobs verbose 
+     ""      ""      ""      "" 
+  Parameter Level Depends.on
+1    number     1           
+2     depth     1           
+3      jobs     1           
+4   verbose     1           
+
+# ------------------------
+# 0 expression(s) specifying forbidden configurations read from '/Users/suzanneong/Desktop/Topics/RandomForest/forbidden.txt'
+# 2021-10-24 18:18:33 ACDT: Initialization
+# Elitist race
+# Elitist new instances: 1
+# Elitist limit: 2
+# nbIterations: 4
+# minNbSurvival: 4
+# nbParameters: 4
+# seed: 1000
+# confidence level: 0.95
+# budget: 1000
+# mu: 10
+# deterministic: TRUE
+
+# 2021-10-24 18:18:33 ACDT: Iteration 1 of 4
+# experimentsUsedSoFar: 0
+# remainingBudget: 1000
+# currentBudget: 250
+# nbConfigurations: 22
+# 2021-10-24 18:18:33 ACDT: Sample 22 configurations from uniform distribution
+# 2021-10-24 18:18:33 ACDT: Launch race
+# Markers:
+     x No test is performed.
+     c Configurations are discarded only due to capping.
+     - The test is performed and some configurations are discarded.
+     = The test is performed but no configuration is discarded.
+     ! The test is performed and configurations could be discarded but elite configurations are preserved.
+     . All alive configurations are elite and nothing is discarded
+
++-+-----------+-----------+-----------+---------------+-----------+--------+-----+----+------+
+| |   Instance|      Alive|       Best|      Mean best| Exp so far|  W time|  rho|KenW|  Qvar|
++-+-----------+-----------+-----------+---------------+-----------+--------+-----+----+------+
+|x|          1|         22|         12|  -0.7203255709|         22|00:00:11|   NA|  NA|    NA|
+|x|          2|         22|         12|   -1.131616406|         44|00:00:10|+0.53|0.76|0.3784|
+|x|          3|         22|         12|  -0.7881216744|         66|00:00:10|+0.56|0.70|0.2270|
+|x|          4|         22|          8|  -0.5213130203|         88|00:00:11|+0.03|0.28|0.7806|
+|x|          5|         22|         12|   -1.185227707|        110|00:00:13|+0.05|0.24|0.8584|
+|x|          6|         22|         12|   -1.118141567|        132|00:00:10|+0.10|0.25|0.7440|
+|x|          7|         22|         12|  -0.9667362735|        154|00:00:11|+0.16|0.28|0.6562|
+|x|          8|         22|         12|  -0.8797670534|        176|00:00:10|+0.08|0.19|0.6020|
+|x|          9|         22|         12|  -0.7846703308|        198|00:00:12|+0.13|0.22|0.5412|
+|-|         10|          3|         12|  -0.7511627421|        220|00:00:11|+0.77|0.79|0.0030|
++-+-----------+-----------+-----------+---------------+-----------+--------+-----+----+------+
+# Stopped because all instances (10) evaluated
+Best-so-far configuration:          12    mean value:   -0.7511627421
+Description of the best-so-far configuration:
+   .ID. number depth jobs verbose .PARENT.
+12   12     98     2    4       6       NA
+
+# 2021-10-24 18:20:26 ACDT: Extracting elites
+# 2021-10-24 18:20:26 ACDT: Elite configurations (first number is the configuration ID; listed from best to worst according to the sum of ranks):
+   .ID. number depth jobs verbose .PARENT. .ALIVE. .RANK.          .WEIGHT.
+12   12     98     2    4       6       NA    TRUE     10 0.500000000000000
+18   18    226     3   15      13       NA    TRUE     23 0.333333333333333
+3     3    266     3   13      16       NA    TRUE     27 0.166666666666667
+# 2021-10-24 18:20:26 ACDT: Initialise model
+# 2021-10-24 18:20:26 ACDT: End of iteration 1
+# 2021-10-24 18:20:26 ACDT: Iteration 2 of 4
+# experimentsUsedSoFar: 220
+# remainingBudget: 780
+# currentBudget: 260
+# nbConfigurations: 24
+# 2021-10-24 18:20:26 ACDT: Update model
+# 2021-10-24 18:20:26 ACDT: Sample 21 configurations from model
+# 2021-10-24 18:20:26 ACDT: Computing similarity of configurations ........................ DONE
+# 2021-10-24 18:20:26 ACDT: Launch race
+# Markers:
+     x No test is performed.
+     c Configurations are discarded only due to capping.
+     - The test is performed and some configurations are discarded.
+     = The test is performed but no configuration is discarded.
+     ! The test is performed and configurations could be discarded but elite configurations are preserved.
+     . All alive configurations are elite and nothing is discarded
+
++-+-----------+-----------+-----------+---------------+-----------+--------+-----+----+------+
+| |   Instance|      Alive|       Best|      Mean best| Exp so far|  W time|  rho|KenW|  Qvar|
++-+-----------+-----------+-----------+---------------+-----------+--------+-----+----+------+
+|x|          2|         24|         31|   -1.654810008|         21|00:00:10|   NA|  NA|    NA|
+|x|          8|         24|         12|  -0.9069448773|         42|00:00:10|+0.42|0.71|0.1185|
+|x|          4|         24|         31|  -0.7729662349|         63|00:00:11|+0.26|0.50|0.3610|
+|x|          6|         24|         31|  -0.8431705120|         84|00:00:10|+0.38|0.54|0.2732|
+|x|         10|         24|         31|  -0.8832139035|        105|00:00:10|+0.42|0.53|0.2202|
+|x|          7|         24|         31|  -0.7495599666|        126|00:00:09|+0.46|0.55|0.1930|
+|x|          3|         24|         31|  -0.6674552931|        147|00:00:09|+0.51|0.58|0.1695|
+|x|          1|         24|         31|  -0.6755034308|        168|00:00:09|+0.55|0.61|0.2137|
+|x|          9|         24|         31|  -0.6047056118|        189|00:00:10|+0.59|0.63|0.1887|
+|-|          5|          7|         31|  -0.8295317164|        210|00:00:12|+0.21|0.29|0.5970|
++-+-----------+-----------+-----------+---------------+-----------+--------+-----+----+------+
+# Stopped because all instances (10) evaluated
+Best-so-far configuration:          31    mean value:   -0.8295317164
+Description of the best-so-far configuration:
+   .ID. number depth jobs verbose .PARENT.
+31   31    117     1    8       7       12
+
+# 2021-10-24 18:22:11 ACDT: Extracting elites
+# 2021-10-24 18:22:11 ACDT: Elite configurations (first number is the configuration ID; listed from best to worst according to the sum of ranks):
+   .ID. number depth jobs verbose .PARENT. .ALIVE. .RANK. .WEIGHT.
+31   31    117     1    8       7       12    TRUE     26      0.4
+25   25    260     1    2       7       12    TRUE     27      0.3
+29   29    152     1    4       8       12    TRUE     31      0.2
+12   12     98     2    4       6       NA    TRUE     44      0.1
+# 2021-10-24 18:22:11 ACDT: End of iteration 2
+# 2021-10-24 18:22:11 ACDT: Iteration 3 of 4
+# experimentsUsedSoFar: 430
+# remainingBudget: 570
+# currentBudget: 285
+# nbConfigurations: 25
+# 2021-10-24 18:22:11 ACDT: Update model
+# 2021-10-24 18:22:11 ACDT: Sample 21 configurations from model
+# 2021-10-24 18:22:11 ACDT: Computing similarity of configurations ......................... DONE
+# 2021-10-24 18:22:11 ACDT: Launch race
+# Markers:
+     x No test is performed.
+     c Configurations are discarded only due to capping.
+     - The test is performed and some configurations are discarded.
+     = The test is performed but no configuration is discarded.
+     ! The test is performed and configurations could be discarded but elite configurations are preserved.
+     . All alive configurations are elite and nothing is discarded
+
++-+-----------+-----------+-----------+---------------+-----------+--------+-----+----+------+
+| |   Instance|      Alive|       Best|      Mean best| Exp so far|  W time|  rho|KenW|  Qvar|
++-+-----------+-----------+-----------+---------------+-----------+--------+-----+----+------+
+|x|          5|         25|         12|   -3.243796325|         21|00:00:09|   NA|  NA|    NA|
+|x|          6|         25|         52|   -2.016583251|         42|00:00:08|-0.39|0.31|1.8145|
+|x|         10|         25|         61|   -1.650280953|         63|00:00:09|+0.06|0.37|1.2010|
+|x|          1|         25|         31|   -1.420494467|         84|00:00:09|+0.25|0.44|0.9320|
+|x|          9|         25|         25|   -1.144381033|        105|00:00:08|+0.38|0.50|0.7601|
+|x|          3|         25|         25|  -0.9832765489|        126|00:00:08|+0.47|0.56|0.6603|
+|x|          2|         25|         25|   -1.074235268|        147|00:00:08|+0.54|0.60|0.5725|
+|x|          4|         25|         61|  -0.9950640922|        168|00:00:08|+0.52|0.58|0.5354|
+|x|          7|         25|         61|  -0.8935347937|        189|00:00:08|+0.57|0.61|0.4779|
+|-|          8|          8|         61|  -0.8260234161|        210|00:00:09|-0.00|0.10|0.8963|
++-+-----------+-----------+-----------+---------------+-----------+--------+-----+----+------+
+# Stopped because all instances (10) evaluated
+Best-so-far configuration:          61    mean value:   -0.8260234161
+Description of the best-so-far configuration:
+   .ID. number depth jobs verbose .PARENT.
+61   61    220     1    8       9       31
+
+# 2021-10-24 18:23:42 ACDT: Extracting elites
+# 2021-10-24 18:23:42 ACDT: Elite configurations (first number is the configuration ID; listed from best to worst according to the sum of ranks):
+   .ID. number depth jobs verbose .PARENT. .ALIVE. .RANK. .WEIGHT.
+61   61    220     1    8       9       31    TRUE     36      0.4
+31   31    117     1    8       7       12    TRUE     39      0.3
+25   25    260     1    2       7       12    TRUE     39      0.2
+51   51    196     1    3       4       29    TRUE     39      0.1
+# 2021-10-24 18:23:42 ACDT: End of iteration 3
+# 2021-10-24 18:23:42 ACDT: Iteration 4 of 4
+# experimentsUsedSoFar: 640
+# remainingBudget: 360
+# currentBudget: 360
+# nbConfigurations: 28
+# 2021-10-24 18:23:42 ACDT: Update model
+# 2021-10-24 18:23:42 ACDT: Sample 24 configurations from model
+# 2021-10-24 18:23:42 ACDT: Computing similarity of configurations ............................ DONE
+# 2021-10-24 18:23:42 ACDT: Launch race
+# Markers:
+     x No test is performed.
+     c Configurations are discarded only due to capping.
+     - The test is performed and some configurations are discarded.
+     = The test is performed but no configuration is discarded.
+     ! The test is performed and configurations could be discarded but elite configurations are preserved.
+     . All alive configurations are elite and nothing is discarded
+
++-+-----------+-----------+-----------+---------------+-----------+--------+-----+----+------+
+| |   Instance|      Alive|       Best|      Mean best| Exp so far|  W time|  rho|KenW|  Qvar|
++-+-----------+-----------+-----------+---------------+-----------+--------+-----+----+------+
+|x|          6|         28|         31|   -1.053783343|         24|00:00:09|   NA|  NA|    NA|
+|x|          1|         28|         31|  -0.8928118691|         48|00:00:10|+0.45|0.72|0.2898|
+|x|          7|         28|         31|  -0.6223046733|         72|00:00:09|+0.57|0.71|0.1637|
+|x|          5|         28|         31|   -1.179970170|         96|00:00:09|-0.04|0.22|0.9686|
+|x|          8|         28|         31|  -0.9879495899|        120|00:00:10|-0.12|0.11|0.9213|
+|x|          4|         28|         31|  -0.8973282291|        144|00:00:09|-0.01|0.16|0.8510|
+|x|         10|         28|         31|  -0.9181938349|        168|00:00:09|+0.06|0.20|0.7733|
+|x|          2|         28|         31|   -1.010270857|        192|00:00:10|+0.13|0.24|0.6924|
+|x|          9|         28|         67|  -0.8998319120|        216|00:00:09|+0.19|0.28|0.6307|
+|-|          3|         18|         67|  -0.8275842348|        240|00:00:09|-0.00|0.10|0.9788|
++-+-----------+-----------+-----------+---------------+-----------+--------+-----+----+------+
+# Stopped because all instances (10) evaluated
+Best-so-far configuration:          67    mean value:   -0.8275842348
+Description of the best-so-far configuration:
+   .ID. number depth jobs verbose .PARENT.
+67   67    275     1    2       8       25
+
+# 2021-10-24 18:25:22 ACDT: Extracting elites
+# 2021-10-24 18:25:22 ACDT: Elite configurations (first number is the configuration ID; listed from best to worst according to the sum of ranks):
+   .ID. number depth jobs verbose .PARENT. .ALIVE. .RANK. .WEIGHT.
+67   67    275     1    2       8       25    TRUE     65      0.4
+66   66    237     1   10       9       61    TRUE     73      0.3
+82   82    268     1    8       8       61    TRUE     76      0.2
+31   31    117     1    8       7       12    TRUE     81      0.1
+# 2021-10-24 18:25:22 ACDT: End of iteration 4
+# 2021-10-24 18:25:22 ACDT: Iteration 5 of 5
+# experimentsUsedSoFar: 880
+# remainingBudget: 120
+# currentBudget: 120
+# nbConfigurations: 10
+# 2021-10-24 18:25:22 ACDT: Update model
+# 2021-10-24 18:25:22 ACDT: Sample 6 configurations from model
+# 2021-10-24 18:25:22 ACDT: Computing similarity of configurations .......... DONE
+# 2021-10-24 18:25:22 ACDT: Launch race
+# Markers:
+     x No test is performed.
+     c Configurations are discarded only due to capping.
+     - The test is performed and some configurations are discarded.
+     = The test is performed but no configuration is discarded.
+     ! The test is performed and configurations could be discarded but elite configurations are preserved.
+     . All alive configurations are elite and nothing is discarded
+
++-+-----------+-----------+-----------+---------------+-----------+--------+-----+----+------+
+| |   Instance|      Alive|       Best|      Mean best| Exp so far|  W time|  rho|KenW|  Qvar|
++-+-----------+-----------+-----------+---------------+-----------+--------+-----+----+------+
+|x|          8|         10|         93|  -0.2691931700|          6|00:00:02|   NA|  NA|    NA|
+|x|          6|         10|         31|  -0.6368253074|         12|00:00:03|-0.43|0.28|1.7977|
+|x|          7|         10|         31|  -0.4516469655|         18|00:00:03|-0.02|0.32|1.1994|
+|x|          9|         10|         31|  -0.3483159890|         24|00:00:03|-0.08|0.19|0.8999|
+|x|          2|         10|         31|  -0.6096147929|         30|00:00:02|+0.09|0.27|0.7320|
+|x|          5|         10|         67|  -0.9795489782|         36|00:00:02|+0.02|0.19|0.9636|
+|x|          1|         10|         67|  -0.9441614608|         42|00:00:02|+0.11|0.24|0.8631|
+|x|          3|         10|         90|  -0.8476237957|         48|00:00:03|+0.05|0.16|0.7791|
+|x|          4|         10|         90|  -0.8028376530|         54|00:00:03|+0.10|0.20|0.7080|
+|-|         10|          7|         67|  -0.8275842348|         60|00:00:03|+0.04|0.14|0.8336|
++-+-----------+-----------+-----------+---------------+-----------+--------+-----+----+------+
+# Stopped because all instances (10) evaluated
+Best-so-far configuration:          67    mean value:   -0.8275842348
+Description of the best-so-far configuration:
+   .ID. number depth jobs verbose .PARENT.
+67   67    275     1    2       8       25
+
+# 2021-10-24 18:25:53 ACDT: Extracting elites
+# 2021-10-24 18:25:53 ACDT: Elite configurations (first number is the configuration ID; listed from best to worst according to the sum of ranks):
+   .ID. number depth jobs verbose .PARENT. .ALIVE. .RANK. .WEIGHT.
+67   67    275     1    2       8       25    TRUE     28      0.4
+90   90    273     1    8       7       82    TRUE     30      0.3
+82   82    268     1    8       8       61    TRUE     41      0.2
+31   31    117     1    8       7       12    TRUE     41      0.1
+# 2021-10-24 18:25:53 ACDT: End of iteration 5
+# 2021-10-24 18:25:53 ACDT: Iteration 6 of 6
+# experimentsUsedSoFar: 940
+# remainingBudget: 60
+# currentBudget: 60
+# nbConfigurations: 6
+# 2021-10-24 18:25:53 ACDT: Update model
+# 2021-10-24 18:25:53 ACDT: Sample 2 configurations from model
+# 2021-10-24 18:25:53 ACDT: Computing similarity of configurations ...... DONE
+# 2021-10-24 18:25:53 ACDT: Launch race
+# Markers:
+     x No test is performed.
+     c Configurations are discarded only due to capping.
+     - The test is performed and some configurations are discarded.
+     = The test is performed but no configuration is discarded.
+     ! The test is performed and configurations could be discarded but elite configurations are preserved.
+     . All alive configurations are elite and nothing is discarded
+
++-+-----------+-----------+-----------+---------------+-----------+--------+-----+----+------+
+| |   Instance|      Alive|       Best|      Mean best| Exp so far|  W time|  rho|KenW|  Qvar|
++-+-----------+-----------+-----------+---------------+-----------+--------+-----+----+------+
+|x|          3|          6|         90|  -0.1780044564|          2|00:00:01|   NA|  NA|    NA|
+|x|         10|          6|         90|  -0.6113203729|          4|00:00:01|+0.49|0.74|0.1189|
+|x|          9|          6|         67|  -0.4201488854|          6|00:00:01|+0.24|0.49|0.6026|
+|x|          1|          6|         90|  -0.4982336068|          8|00:00:01|+0.10|0.33|0.6554|
+|x|          2|          6|         90|  -0.7228227232|         10|00:00:01|-0.06|0.15|0.9203|
+|x|          7|          6|         90|  -0.6158939168|         12|00:00:01|-0.08|0.10|0.8733|
+|x|          5|          6|         67|  -0.9391027646|         14|00:00:01|-0.02|0.13|0.7891|
+|x|          6|          6|         67|  -0.9514911097|         16|00:00:01|-0.05|0.08|0.8470|
+|x|          4|          6|         67|  -0.8951750081|         18|00:00:01|+0.01|0.12|0.7887|
+|=|          8|          6|         67|  -0.8275842348|         20|00:00:01|+0.01|0.11|0.7600|
++-+-----------+-----------+-----------+---------------+-----------+--------+-----+----+------+
+# Stopped because all instances (10) evaluated
+Best-so-far configuration:          67    mean value:   -0.8275842348
+Description of the best-so-far configuration:
+   .ID. number depth jobs verbose .PARENT.
+67   67    275     1    2       8       25
+
+# 2021-10-24 18:26:06 ACDT: Extracting elites
+# 2021-10-24 18:26:06 ACDT: Elite configurations (first number is the configuration ID; listed from best to worst according to the sum of ranks):
+   .ID. number depth jobs verbose .PARENT. .ALIVE. .RANK. .WEIGHT.
+67   67    275     1    2       8       25    TRUE     28      0.4
+90   90    273     1    8       7       82    TRUE     32      0.3
+96   96    282     1    2       8       67    TRUE     32      0.2
+82   82    268     1    8       8       61    TRUE     35      0.1
+# 2021-10-24 18:26:06 ACDT: End of iteration 6
+# 2021-10-24 18:26:06 ACDT: Iteration 7 of 7
+# experimentsUsedSoFar: 960
+# remainingBudget: 40
+# currentBudget: 40
+# nbConfigurations: 5
+# 2021-10-24 18:26:06 ACDT: Update model
+# 2021-10-24 18:26:06 ACDT: Sample 1 configurations from model
+# 2021-10-24 18:26:06 ACDT: Computing similarity of configurations ..... DONE
+# 2021-10-24 18:26:06 ACDT: Launch race
+# Markers:
+     x No test is performed.
+     c Configurations are discarded only due to capping.
+     - The test is performed and some configurations are discarded.
+     = The test is performed but no configuration is discarded.
+     ! The test is performed and configurations could be discarded but elite configurations are preserved.
+     . All alive configurations are elite and nothing is discarded
+
++-+-----------+-----------+-----------+---------------+-----------+--------+-----+----+------+
+| |   Instance|      Alive|       Best|      Mean best| Exp so far|  W time|  rho|KenW|  Qvar|
++-+-----------+-----------+-----------+---------------+-----------+--------+-----+----+------+
+|x|          6|          5|         82|   -1.038688880|          1|00:00:01|   NA|  NA|    NA|
+|x|          4|          5|         96|  -0.7415508895|          2|00:00:01|+0.40|0.70|0.5581|
+|x|          5|          5|         67|   -1.453848043|          3|00:00:01|+0.40|0.60|0.4308|
+|x|          2|          5|         67|   -1.495783799|          4|00:00:01|-0.02|0.24|0.7860|
+|x|          3|          5|         67|   -1.232098067|          5|00:00:01|+0.00|0.20|0.7750|
+|x|          1|          5|         96|   -1.147863460|          6|00:00:01|-0.11|0.07|0.9011|
+|x|          7|          5|         67|  -0.9962119366|          7|00:00:01|-0.05|0.10|0.8437|
+|x|          8|          5|         67|  -0.8990938539|          8|00:00:01|+0.00|0.13|0.7835|
+|x|         10|          5|         67|  -0.9152735132|          9|00:00:01|+0.01|0.12|0.7933|
+|=|          9|          5|         67|  -0.8275842348|         10|00:00:01|-0.02|0.08|0.8205|
++-+-----------+-----------+-----------+---------------+-----------+--------+-----+----+------+
+# Stopped because all instances (10) evaluated
+Best-so-far configuration:          67    mean value:   -0.8275842348
+Description of the best-so-far configuration:
+   .ID. number depth jobs verbose .PARENT.
+67   67    275     1    2       8       25
+
+# 2021-10-24 18:26:19 ACDT: Extracting elites
+# 2021-10-24 18:26:19 ACDT: Elite configurations (first number is the configuration ID; listed from best to worst according to the sum of ranks):
+   .ID. number depth jobs verbose .PARENT. .ALIVE. .RANK. .WEIGHT.
+67   67    275     1    2       8       25    TRUE     24      0.4
+90   90    273     1    8       7       82    TRUE     29      0.3
+96   96    282     1    2       8       67    TRUE     29      0.2
+82   82    268     1    8       8       61    TRUE     32      0.1
+# 2021-10-24 18:26:19 ACDT: End of iteration 7
+# 2021-10-24 18:26:19 ACDT: Stopped because there is not enough budget left to race more than the minimum (4)
+# You may either increase the budget or set 'minNbSurvival' to a lower value
+# Iteration: 8
+# nbIterations: 8
+# experimentsUsedSoFar: 970
+# timeUsed: 0
+# remainingBudget: 30
+# currentBudget: 30
+# number of elites: 4
+# nbConfigurations: 4
+# Best configurations (first number is the configuration ID; listed from best to worst according to the sum of ranks):
+   number depth jobs verbose
+67    275     1    2       8
+90    273     1    8       7
+96    282     1    2       8
+82    268     1    8       8
+# Best configurations as commandlines (first number is the configuration ID; same order as above):
+67  --num 275 --dep 1 --jobs 2 --ver 8
+90  --num 273 --dep 1 --jobs 8 --ver 7
+96  --num 282 --dep 1 --jobs 2 --ver 8
+82  --num 268 --dep 1 --jobs 8 --ver 8
+ 
+
+# 2021-10-24 18:26:19 ACDT: Testing configurations (in no particular order): 12 31 61 67
+   number depth jobs verbose
+12     98     2    4       6
+31    117     1    8       7
+61    220     1    8       9
+67    275     1    2       8
+# Testing of elite configurations: 1 
+# Testing iteration configurations: TRUE 
+# 0 expression(s) specifying forbidden configurations read from '/Users/suzanneong/Desktop/Topics/RandomForest/forbidden.txt'
+# 2021-10-24 18:26:35 ACDT: Testing results (column number is configuration ID in no particular order):
+             12          31          61          67
+1t  -0.44734830 -1.04854994 -1.04510015 -1.04485096
+2t  -0.05143642 -0.07988507 -0.08090529 -0.08026103
+3t  -0.10086028 -0.17725084 -0.17627854 -0.17561838
+4t  -0.71843443 -0.73128601 -0.73152208 -0.73172442
+5t  -0.31793914 -0.44420278 -0.44065723 -0.44256571
+6t  -1.52371021 -1.65038503 -1.65053662 -1.64615824
+7t  -0.80215066 -1.03459594 -1.04228117 -1.04257729
+8t  -3.25597712 -2.88102592 -2.87400184 -2.88620071
+9t  -0.02412054 -0.03849697 -0.03851002 -0.03853463
+10t -0.18585722 -0.21896658 -0.21467214 -0.21643744
+# 2021-10-24 18:26:35 ACDT: Finished testing
+[1m[7m%[27m[1m[0m                                                                                                                                 ]7;file://Sushis-MacBook.local/Users/suzanneong/Desktop/Topics/RandomForest[0m[27m[24m[J(base) suzanneong@Sushis-MacBook RandomForest % [K[?2004heexit[?2004l
+Saving session...
+...saving history...truncating history files...
+...completed.
+
+Script done on Sun Oct 24 18:27:00 2021
