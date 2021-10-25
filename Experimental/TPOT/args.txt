@@ -1,0 +1,1 @@
+['./main.py', '-v', '--pop', '289', '--gen', '14', '--cros', '0.64', '--pc', '16', '--i', '/Users/suzanneong/Desktop/Topics/TPOT/Instances/i4', '--s', '1571144609', '--datfile', 'c3-4.dat']

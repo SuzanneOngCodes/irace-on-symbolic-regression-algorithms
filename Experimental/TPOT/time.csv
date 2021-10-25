@@ -1,0 +1,2 @@
+Cpu,mae,mse,rmse,File,c,epison,cs,iterations
+147471.271606,0.034490358126721764,0.02427603305785124,0.15580767971397058,Hill_Valley_with_noise.csv,1290,30,0.7,1.0

@@ -1,0 +1,6 @@
+
+# 1:            2:                   3: 4:      5:
+population      "--pop "        i  (50, 500)
+generation        "--gen "      i  (10, 50)
+crossover       "--cros "       r  (0.01, 1.0)
+number_of_jobs    "--pc "       i  (1, 20)
