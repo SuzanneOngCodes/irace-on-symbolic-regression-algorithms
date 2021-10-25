@@ -1,0 +1,368 @@
+Script started on Sun Oct 24 18:45:56 2021
+Restored session: Sun 24 Oct 2021 18:38:21 ACDT
+[1m[7m%[27m[1m[0m                                                                                                                                 ]7;file://Sushis-MacBook.local/Users/suzanneong/Desktop/Topics/GPLearn[0m[27m[24m[J(base) suzanneong@Sushis-MacBook GPLearn % [K[?2004hiexitirace --debug-level 1     [?2004l
+#------------------------------------------------------------------------------
+# irace: An implementation in R of (Elitist) Iterated Racing
+# Version: 3.4.1.9fcaeaf
+# Copyright (C) 2010-2020
+# Manuel Lopez-Ibanez     <manuel.lopez-ibanez@manchester.ac.uk>
+# Jeremie Dubois-Lacoste  
+# Leslie Perez Caceres    <leslie.perez.caceres@ulb.ac.be>
+#
+# This is free software, and you are welcome to redistribute it under certain
+# conditions.  See the GNU General Public License for details. There is NO
+# WARRANTY; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+#
+# irace builds upon previous code from the race package:
+#     race: Racing methods for the selection of the best
+#     Copyright (C) 2003 Mauro Birattari
+#------------------------------------------------------------------------------
+# installed at: /Library/Frameworks/R.framework/Versions/4.1-arm64/Resources/library/irace
+# called with: --debug-level 1
+Warning: A default scenario file './scenario.txt' has been found and will be read
+# 0 expression(s) specifying forbidden configurations read from '/Users/suzanneong/Desktop/Topics/GPLearn/forbidden.txt'
+Warning: Assuming 'mu = firstTest' because 'mu' cannot be lower than 'firstTest'
+## irace scenario:
+scenarioFile = "./scenario.txt"
+parameterFile = "/Users/suzanneong/Desktop/Topics/GPLearn/parameters.txt"
+execDir = "/Users/suzanneong/Desktop/Topics/GPLearn"
+logFile = "/Users/suzanneong/Desktop/Topics/GPLearn/irace.Rdata"
+recoveryFile = NULL
+instances = c("/Users/suzanneong/Desktop/Topics/GPLearn/../Datasets/vladislavleva-1.training.csv", "/Users/suzanneong/Desktop/Topics/GPLearn/../Datasets/vladislavleva-2.training.csv", "/Users/suzanneong/Desktop/Topics/GPLearn/../Datasets/vladislavleva-3.training.csv", "/Users/suzanneong/Desktop/Topics/GPLearn/../Datasets/vladislavleva-4.training.csv", "/Users/suzanneong/Desktop/Topics/GPLearn/../Datasets/vladislavleva-5.training.csv", "/Users/suzanneong/Desktop/Topics/GPLearn/../Datasets/vladislavleva-6.training.csv", "/Users/suzanneong/Desktop/Topics/GPLearn/../Datasets/vladislavleva-7.training.csv", "/Users/suzanneong/Desktop/Topics/GPLearn/../Datasets/vladislavleva-8.training.csv", "/Users/suzanneong/Desktop/Topics/GPLearn/../Datasets/keijzer-1.training.csv", "/Users/suzanneong/Desktop/Topics/GPLearn/../Datasets/keijzer-2.training.csv", "/Users/suzanneong/Desktop/Topics/GPLearn/../Datasets/keijzer-3.training.csv", "/Users/suzanneong/Desktop/Topics/GPLearn/../Datasets/keijzer-4.training.csv", "/Users/suzanneong/Desktop/Topics/GPLearn/../Datasets/keijzer-5.training.csv", "/Users/suzanneong/Desktop/Topics/GPLearn/../Datasets/keijzer-6.training.csv", "/Users/suzanneong/Desktop/Topics/GPLearn/../Datasets/keijzer-7.training.csv", "/Users/suzanneong/Desktop/Topics/GPLearn/../Datasets/keijzer-8.training.csv", "/Users/suzanneong/Desktop/Topics/GPLearn/../Datasets/keijzer-9.training.csv", "/Users/suzanneong/Desktop/Topics/GPLearn/../Datasets/keijzer-10.training.csv", "/Users/suzanneong/Desktop/Topics/GPLearn/../Datasets/keijzer-11.training.csv", "/Users/suzanneong/Desktop/Topics/GPLearn/../Datasets/keijzer-13.training.csv", "/Users/suzanneong/Desktop/Topics/GPLearn/../Datasets/keijzer-14.training.csv", "/Users/suzanneong/Desktop/Topics/GPLearn/../Datasets/keijzer-15.training.csv", "/Users/suzanneong/Desktop/Topics/GPLearn/../Datasets/nguyen-3.training.csv", "/Users/suzanneong/Desktop/Topics/GPLearn/../Datasets/nguyen-4.training.csv", "/Users/suzanneong/Desktop/Topics/GPLearn/../Datasets/nguyen-5.training.csv", "/Users/suzanneong/Desktop/Topics/GPLearn/../Datasets/nguyen-6.training.csv", "/Users/suzanneong/Desktop/Topics/GPLearn/../Datasets/nguyen-7.training.csv", "/Users/suzanneong/Desktop/Topics/GPLearn/../Datasets/nguyen-8.training.csv", "/Users/suzanneong/Desktop/Topics/GPLearn/../Datasets/nguyen-9.training.csv", "/Users/suzanneong/Desktop/Topics/GPLearn/../Datasets/nguyen-10.training.csv")
+initConfigurations = NULL
+trainInstancesDir = "/Users/suzanneong/Desktop/Topics/GPLearn"
+trainInstancesFile = "/Users/suzanneong/Desktop/Topics/benchmark.txt"
+configurationsFile = ""
+forbiddenExps = NULL = expression()
+forbiddenFile = "/Users/suzanneong/Desktop/Topics/GPLearn/forbidden.txt"
+targetRunner = "/Users/suzanneong/Desktop/Topics/GPLearn/target-runner"
+targetRunnerRetries = 0
+targetRunnerData = ""
+targetRunnerParallel = NULL
+targetEvaluator = NULL
+maxExperiments = 1000
+maxTime = 0
+budgetEstimation = 0.02
+digits = 2
+debugLevel = 1
+nbIterations = 0
+nbExperimentsPerIteration = 0
+sampleInstances = TRUE
+testType = "friedman"
+firstTest = 10
+eachTest = 2
+minNbSurvival = 0
+nbConfigurations = 0
+mu = 10
+confidence = 0.95
+deterministic = TRUE
+seed = 1000
+parallel = 4
+loadBalancing = FALSE
+mpi = FALSE
+batchmode = "0"
+softRestart = TRUE
+softRestartThreshold = 0.01
+testInstancesDir = ""
+testInstancesFile = "/Users/suzanneong/Desktop/Topics/benchmarkTT.txt"
+testInstances = c("1t" = "../Datasets/vladislavleva-1.test.csv", "2t" = "../Datasets/vladislavleva-2.test.csv", "3t" = "../Datasets/vladislavleva-3.test.csv", "4t" = "../Datasets/vladislavleva-4.test.csv", "5t" = "../Datasets/vladislavleva-5.test.csv", "6t" = "../Datasets/vladislavleva-6.test.csv", "7t" = "../Datasets/vladislavleva-7.test.csv", "8t" = "../Datasets/vladislavleva-8.test.csv", "9t" = "../Datasets/keijzer-1.test.csv", "10t" = "../Datasets/keijzer-2.test.csv", "11t" = "../Datasets/keijzer-3.test.csv", "12t" = "../Datasets/keijzer-4.test.csv", "13t" = "../Datasets/keijzer-5.test.csv", "14t" = "../Datasets/keijzer-6.test.csv", "15t" = "../Datasets/keijzer-7.test.csv", "16t" = "../Datasets/keijzer-8.test.csv", "17t" = "../Datasets/keijzer-9.test.csv", "18t" = "../Datasets/keijzer-10.test.csv", "19t" = "../Datasets/keijzer-11.test.csv", "20t" = "../Datasets/keijzer-13.test.csv", "21t" = "../Datasets/keijzer-14.test.csv", "22t" = "../Datasets/keijzer-15.test.csv", "23t" = "../Datasets/nguyen-3.test.csv", "24t" = "../Datasets/nguyen-4.test.csv", "25t" = "../Datasets/nguyen-5.test.csv", "26t" = "../Datasets/nguyen-6.test.csv", "27t" = "../Datasets/nguyen-7.test.csv", "28t" = "../Datasets/nguyen-8.test.csv", "29t" = "../Datasets/nguyen-9.test.csv", "30t" = "../Datasets/nguyen-10.test.csv")
+testNbElites = 1
+testIterationElites = TRUE
+elitist = TRUE
+elitistNewInstances = 1
+elitistLimit = 2
+repairConfiguration = NULL
+capping = FALSE
+cappingType = "median"
+boundType = "candidate"
+boundMax = NULL
+boundDigits = 0
+boundPar = 1
+boundAsTimeout = TRUE
+postselection = 0
+aclib = FALSE
+## end of irace scenario
+# --- Parameters Hierarchy ---
+[1] "population"            "generation"            "crossover"             "parsimony_coefficient"
+           population            generation             crossover parsimony_coefficient 
+                    1                     1                     1                     1 
+           population            generation             crossover parsimony_coefficient 
+                   ""                    ""                    ""                    "" 
+              Parameter Level Depends.on
+1            population     1           
+2            generation     1           
+3             crossover     1           
+4 parsimony_coefficient     1           
+
+# ------------------------
+# 0 expression(s) specifying forbidden configurations read from '/Users/suzanneong/Desktop/Topics/GPLearn/forbidden.txt'
+# 2021-10-24 18:46:00 ACDT: Initialization
+# Elitist race
+# Elitist new instances: 1
+# Elitist limit: 2
+# nbIterations: 4
+# minNbSurvival: 4
+# nbParameters: 4
+# seed: 1000
+# confidence level: 0.95
+# budget: 1000
+# mu: 10
+# deterministic: TRUE
+
+# 2021-10-24 18:46:00 ACDT: Iteration 1 of 4
+# experimentsUsedSoFar: 0
+# remainingBudget: 1000
+# currentBudget: 250
+# nbConfigurations: 20
+# 2021-10-24 18:46:00 ACDT: Sample 20 configurations from uniform distribution
+# 2021-10-24 18:46:00 ACDT: Launch race
+# Markers:
+     x No test is performed.
+     c Configurations are discarded only due to capping.
+     - The test is performed and some configurations are discarded.
+     = The test is performed but no configuration is discarded.
+     ! The test is performed and configurations could be discarded but elite configurations are preserved.
+     . All alive configurations are elite and nothing is discarded
+
++-+-----------+-----------+-----------+---------------+-----------+--------+-----+----+------+
+| |   Instance|      Alive|       Best|      Mean best| Exp so far|  W time|  rho|KenW|  Qvar|
++-+-----------+-----------+-----------+---------------+-----------+--------+-----+----+------+
+|x|          1|         20|          8|   -8.290614848|         20|00:00:41|   NA|  NA|    NA|
+|x|          2|         20|         13|   -1.999911085|         40|00:00:40|+0.14|0.57|0.9973|
+|x|          3|         20|         12|   -2.104935425|         60|00:00:34|-0.10|0.27|0.8958|
+|x|          4|         20|         12|   -2.132507767|         80|00:00:36|-0.07|0.20|0.6854|
+|x|          5|         20|         12|   -2.415834799|        100|00:00:36|+0.04|0.23|0.6567|
+|x|          6|         20|         12|   -2.337316474|        120|00:00:36|+0.09|0.24|0.5946|
+|x|          7|         20|         12|   -2.204060001|        140|00:00:37|+0.15|0.27|0.5728|
+|x|          8|         20|         12|   -1.962878479|        160|00:00:34|+0.13|0.23|0.5314|
+|x|          9|         20|         12|   -1.799221059|        180|00:00:38|+0.12|0.22|0.5859|
+|-|         10|          1|         12|   -1.949102191|        200|00:00:35|   NA|  NA|    NA|
++-+-----------+-----------+-----------+---------------+-----------+--------+-----+----+------+
+# Stopped because number of alive configurations (1) <= minimum number of configurations (4)
+Best-so-far configuration:          12    mean value:    -1.949102191
+Description of the best-so-far configuration:
+   .ID. population generation crossover parsimony_coefficient .PARENT.
+12   12        282         16      0.08                  0.51       NA
+
+# 2021-10-24 18:52:11 ACDT: Extracting elites
+# 2021-10-24 18:52:11 ACDT: Elite configurations (first number is the configuration ID; listed from best to worst according to the sum of ranks):
+   .ID. population generation crossover parsimony_coefficient .PARENT. .ALIVE. .RANK. .WEIGHT.
+12   12        282         16      0.08                  0.51       NA    TRUE      1        1
+# 2021-10-24 18:52:11 ACDT: Initialise model
+# 2021-10-24 18:52:11 ACDT: End of iteration 1
+# 2021-10-24 18:52:11 ACDT: Iteration 2 of 4
+# experimentsUsedSoFar: 200
+# remainingBudget: 800
+# currentBudget: 266
+# nbConfigurations: 19
+# 2021-10-24 18:52:11 ACDT: Update model
+# 2021-10-24 18:52:11 ACDT: Sample 18 configurations from model
+# 2021-10-24 18:52:11 ACDT: Computing similarity of configurations ................... DONE
+# 2021-10-24 18:52:11 ACDT: Launch race
+# Markers:
+     x No test is performed.
+     c Configurations are discarded only due to capping.
+     - The test is performed and some configurations are discarded.
+     = The test is performed but no configuration is discarded.
+     ! The test is performed and configurations could be discarded but elite configurations are preserved.
+     . All alive configurations are elite and nothing is discarded
+
++-+-----------+-----------+-----------+---------------+-----------+--------+-----+----+------+
+| |   Instance|      Alive|       Best|      Mean best| Exp so far|  W time|  rho|KenW|  Qvar|
++-+-----------+-----------+-----------+---------------+-----------+--------+-----+----+------+
+|x|         11|         19|         12|  -0.8067591741|         19|00:00:23|   NA|  NA|    NA|
+|x|          4|         19|         12|   -1.510991983|         37|00:00:20|+0.00|0.50|0.4737|
+|x|          1|         19|         35|   -3.770866271|         55|00:00:21|+0.09|0.39|0.5754|
+|x|          6|         19|         12|   -2.158830827|         73|00:00:21|+0.11|0.33|0.6569|
+|x|          5|         19|         12|   -2.436893247|         91|00:00:19|+0.11|0.29|0.6443|
+|x|          3|         19|         12|   -2.424402650|        109|00:00:18|+0.14|0.29|0.6328|
+|x|          7|         19|         12|   -2.278705295|        127|00:00:19|+0.16|0.28|0.5844|
+|x|         10|         19|         12|   -2.406121181|        145|00:00:19|+0.17|0.28|0.6028|
+|x|          9|         19|         12|   -2.193214572|        163|00:00:21|+0.15|0.24|0.6404|
+|-|          2|          4|         12|   -2.002317326|        181|00:00:20|-0.03|0.08|0.5851|
++-+-----------+-----------+-----------+---------------+-----------+--------+-----+----+------+
+# Stopped because number of alive configurations (4) <= minimum number of configurations (4)
+Best-so-far configuration:          12    mean value:    -1.845252826
+Description of the best-so-far configuration:
+   .ID. population generation crossover parsimony_coefficient .PARENT.
+12   12        282         16      0.08                  0.51       NA
+
+# 2021-10-24 18:55:38 ACDT: Extracting elites
+# 2021-10-24 18:55:38 ACDT: Elite configurations (first number is the configuration ID; listed from best to worst according to the sum of ranks):
+   .ID. population generation crossover parsimony_coefficient .PARENT. .ALIVE. .RANK. .WEIGHT.
+12   12        282         16      0.08                  0.51       NA    TRUE    1.0      0.4
+34   34         83         19      0.11                  0.25       12    TRUE   20.0      0.3
+22   22        332         14      0.05                  0.62       12    TRUE   21.5      0.2
+24   24        270         24      0.11                  0.56       12    TRUE   21.5      0.1
+# 2021-10-24 18:55:38 ACDT: End of iteration 2
+# 2021-10-24 18:55:38 ACDT: Iteration 3 of 4
+# experimentsUsedSoFar: 381
+# remainingBudget: 619
+# currentBudget: 309
+# nbConfigurations: 22
+# 2021-10-24 18:55:38 ACDT: Update model
+# 2021-10-24 18:55:38 ACDT: Sample 18 configurations from model
+# 2021-10-24 18:55:38 ACDT: Computing similarity of configurations ...................... DONE
+# 2021-10-24 18:55:38 ACDT: Launch race
+# Markers:
+     x No test is performed.
+     c Configurations are discarded only due to capping.
+     - The test is performed and some configurations are discarded.
+     = The test is performed but no configuration is discarded.
+     ! The test is performed and configurations could be discarded but elite configurations are preserved.
+     . All alive configurations are elite and nothing is discarded
+
++-+-----------+-----------+-----------+---------------+-----------+--------+-----+----+------+
+| |   Instance|      Alive|       Best|      Mean best| Exp so far|  W time|  rho|KenW|  Qvar|
++-+-----------+-----------+-----------+---------------+-----------+--------+-----+----+------+
+|x|         12|         22|         42|   -2.345188882|         22|00:00:17|   NA|  NA|    NA|
+|x|          8|         22|         42|   -1.442430025|         43|00:00:18|+0.10|0.55|0.9247|
+|x|         11|         22|         56|  -0.8352707928|         61|00:00:14|+0.13|0.42|0.8767|
+|x|          3|         22|         56|  -0.8129096037|         79|00:00:15|+0.21|0.41|0.8029|
+|x|          6|         22|         56|  -0.9995265499|         97|00:00:15|+0.13|0.31|0.8614|
+|x|         10|         22|         12|   -1.695146059|        115|00:00:14|+0.13|0.28|0.8620|
+|x|          9|         22|         12|   -1.522976864|        133|00:00:15|+0.07|0.20|0.9104|
+|x|          4|         22|         12|   -1.609507855|        151|00:00:14|+0.06|0.18|0.8021|
+|x|          2|         22|         22|   -1.447473532|        169|00:00:15|+0.06|0.17|0.8059|
+|-|          5|         17|         12|   -1.670944788|        187|00:00:14|-0.06|0.04|0.8599|
+|x|          1|         17|         12|   -1.852551125|        200|00:00:11|-0.06|0.04|0.8479|
+|=|          7|         17|         12|   -1.815215295|        213|00:00:11|-0.05|0.04|0.8600|
+|x|         13|         17|         12|   -1.722541562|        230|00:00:11|-0.02|0.06|0.8377|
+|=|         14|         17|         12|   -1.662961918|        247|00:00:13|-0.02|0.05|0.8474|
++-+-----------+-----------+-----------+---------------+-----------+--------+-----+----+------+
+# Stopped because tests without elimination (2) >= elitistLimit (2)
+Best-so-far configuration:          12    mean value:    -1.662961918
+Description of the best-so-far configuration:
+   .ID. population generation crossover parsimony_coefficient .PARENT.
+12   12        282         16      0.08                  0.51       NA
+
+# 2021-10-24 18:59:00 ACDT: Extracting elites
+# 2021-10-24 18:59:00 ACDT: Elite configurations (first number is the configuration ID; listed from best to worst according to the sum of ranks):
+   .ID. population generation crossover parsimony_coefficient .PARENT. .ALIVE. .RANK. .WEIGHT.
+12   12        282         16      0.08                  0.51       NA    TRUE   95.0      0.4
+49   49        330         17      0.04                  0.63       22    TRUE  109.5      0.3
+42   42        123         24      0.04                  0.32       34    TRUE  114.0      0.2
+39   39         62         17      0.03                  0.29       34    TRUE  118.5      0.1
+# 2021-10-24 18:59:00 ACDT: End of iteration 3
+# 2021-10-24 18:59:00 ACDT: Iteration 4 of 4
+# experimentsUsedSoFar: 628
+# remainingBudget: 372
+# currentBudget: 372
+# nbConfigurations: 23
+# 2021-10-24 18:59:00 ACDT: Update model
+# 2021-10-24 18:59:00 ACDT: Sample 19 configurations from model
+# 2021-10-24 18:59:00 ACDT: Computing similarity of configurations ....................... DONE
+# 2021-10-24 18:59:00 ACDT: Launch race
+# Markers:
+     x No test is performed.
+     c Configurations are discarded only due to capping.
+     - The test is performed and some configurations are discarded.
+     = The test is performed but no configuration is discarded.
+     ! The test is performed and configurations could be discarded but elite configurations are preserved.
+     . All alive configurations are elite and nothing is discarded
+
++-+-----------+-----------+-----------+---------------+-----------+--------+-----+----+------+
+| |   Instance|      Alive|       Best|      Mean best| Exp so far|  W time|  rho|KenW|  Qvar|
++-+-----------+-----------+-----------+---------------+-----------+--------+-----+----+------+
+|x|         15|         23|         72|   -4.206254051|         23|00:00:17|   NA|  NA|    NA|
+|x|          9|         23|         67|   -2.564835733|         42|00:00:16|-0.22|0.39|1.2652|
+|x|          4|         23|         67|   -3.108852302|         61|00:00:14|+0.08|0.39|0.9341|
+|x|         10|         23|         67|   -3.386939344|         80|00:00:14|+0.04|0.28|0.8980|
+|x|         12|         23|         67|   -2.793835374|         99|00:00:15|+0.05|0.24|0.9373|
+|x|         11|         23|         67|   -2.470167035|        118|00:00:14|+0.05|0.21|0.9481|
+|x|          5|         23|         67|   -2.375000217|        137|00:00:14|+0.04|0.18|0.9457|
+|x|          1|         23|         69|   -2.663921407|        156|00:00:14|+0.03|0.15|0.9387|
+|x|          2|         23|         73|   -2.540527936|        175|00:00:15|+0.04|0.15|0.9075|
+|=|          7|         23|         67|   -2.208157419|        194|00:00:15|+0.04|0.13|0.9195|
+|x|         14|         23|         58|   -2.053450001|        213|00:00:13|+0.02|0.11|0.9525|
+|=|          8|         23|         73|   -2.139478815|        232|00:00:15|+0.01|0.10|0.9425|
+|x|          3|         23|         58|   -1.824863054|        251|00:00:14|+0.01|0.09|0.9483|
+|=|          6|         23|         69|   -1.918315831|        270|00:00:14|+0.02|0.09|0.9316|
+|x|         13|         23|         69|   -1.946309676|        289|00:00:14|+0.03|0.09|0.9214|
+|=|         16|         23|         69|   -1.843063523|        312|00:00:18|+0.01|0.08|0.9197|
+|x|         17|         23|         69|   -2.022311521|        335|00:00:18|+0.01|0.07|0.9357|
+|=|         18|         23|         69|   -1.938360805|        358|00:00:19|+0.02|0.07|0.9293|
++-+-----------+-----------+-----------+---------------+-----------+--------+-----+----+------+
+# Stopped because experiments for next test (404) > max experiments (372)
+Best-so-far configuration:          69    mean value:    -1.938360805
+Description of the best-so-far configuration:
+   .ID. population generation crossover parsimony_coefficient .PARENT.
+69   69        260         13      0.01                  0.61       12
+
+# 2021-10-24 19:03:43 ACDT: Extracting elites
+# 2021-10-24 19:03:43 ACDT: Elite configurations (first number is the configuration ID; listed from best to worst according to the sum of ranks):
+   .ID. population generation crossover parsimony_coefficient .PARENT. .ALIVE. .RANK. .WEIGHT.
+69   69        260         13      0.01                  0.61       12    TRUE  151.0      0.4
+58   58        284         15      0.05                  0.55       12    TRUE  184.0      0.3
+73   73         66         21      0.03                  0.28       39    TRUE  184.5      0.2
+63   63        108         26      0.01                  0.39       42    TRUE  185.0      0.1
+# 2021-10-24 19:03:43 ACDT: End of iteration 4
+# 2021-10-24 19:03:43 ACDT: Stopped because there is not enough budget left to race more than the minimum (4)
+# You may either increase the budget or set 'minNbSurvival' to a lower value
+# Iteration: 5
+# nbIterations: 5
+# experimentsUsedSoFar: 986
+# timeUsed: 0
+# remainingBudget: 14
+# currentBudget: 14
+# number of elites: 4
+# nbConfigurations: 4
+# Best configurations (first number is the configuration ID; listed from best to worst according to the sum of ranks):
+   population generation crossover parsimony_coefficient
+69        260         13      0.01                  0.61
+58        284         15      0.05                  0.55
+73         66         21      0.03                  0.28
+63        108         26      0.01                  0.39
+# Best configurations as commandlines (first number is the configuration ID; same order as above):
+69  --pop 260 --gen 13 --cros 0.01 --pc 0.61
+58  --pop 284 --gen 15 --cros 0.05 --pc 0.55
+73  --pop 66 --gen 21 --cros 0.03 --pc 0.28
+63  --pop 108 --gen 26 --cros 0.01 --pc 0.39
+ 
+
+# 2021-10-24 19:03:43 ACDT: Testing configurations (in no particular order): 12 69
+   population generation crossover parsimony_coefficient
+12        282         16      0.08                  0.51
+69        260         13      0.01                  0.61
+# Testing of elite configurations: 1 
+# Testing iteration configurations: TRUE 
+# 0 expression(s) specifying forbidden configurations read from '/Users/suzanneong/Desktop/Topics/GPLearn/forbidden.txt'
+# 2021-10-24 19:06:03 ACDT: Testing results (column number is configuration ID in no particular order):
+            12          69
+1t  -0.2807990 -1.10255116
+2t  -0.3007649 -0.04534975
+3t  -1.2591413 -1.25914127
+4t  -0.2077299 -0.20772993
+5t  -0.4876949 -1.99058919
+6t  -2.4661035 -4.74633939
+7t  -3.6905842 -3.69058422
+8t  -0.6582038 -5.17758586
+9t  -0.8482660 -0.84826602
+10t -0.4257330 -1.56619963
+11t -1.1091251 -0.45494466
+12t -0.2173861 -0.05786824
+13t -0.6623013 -1.11091584
+14t -4.2940433 -4.20804174
+15t -0.2070555 -0.20705548
+16t -4.7780077 -8.39322039
+17t -4.7712693 -2.41465691
+18t -0.3086315 -0.30863154
+19t -4.5675595 -4.56755955
+20t -3.9306444 -2.64300438
+21t -0.9779386 -0.97793860
+22t -3.0706207 -4.08267351
+23t -0.7815357 -0.78153572
+24t -0.6040413 -0.60404129
+25t -0.2084875 -1.08728154
+26t -0.4208863 -0.99453736
+27t -0.4310358 -0.43103582
+28t -0.7650000 -0.43244437
+29t -0.4749898 -0.52653544
+30t -0.9012993 -0.97003105
+# 2021-10-24 19:06:03 ACDT: Finished testing
+[1m[7m%[27m[1m[0m                                                                                                                                 ]7;file://Sushis-MacBook.local/Users/suzanneong/Desktop/Topics/GPLearn[0m[27m[24m[J(base) suzanneong@Sushis-MacBook GPLearn % [K[?2004heexit[?2004l
+Saving session...
+...saving history...truncating history files...
+...completed.
+
+Script done on Sun Oct 24 19:06:13 2021

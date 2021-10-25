@@ -1,0 +1,566 @@
+Script started on Sun Oct 24 21:55:52 2021
+Restored session: Sun 24 Oct 2021 21:54:40 ACDT
+[1m[7m%[27m[1m[0m                                                                                                                                 ]7;file://Sushis-MacBook.local/Users/suzanneong/Desktop/Topics/GPLearn[0m[27m[24m[J(base) suzanneong@Sushis-MacBook GPLearn % [K[?2004hexitirace --debug-level 1     [?2004l
+#------------------------------------------------------------------------------
+# irace: An implementation in R of (Elitist) Iterated Racing
+# Version: 3.4.1.9fcaeaf
+# Copyright (C) 2010-2020
+# Manuel Lopez-Ibanez     <manuel.lopez-ibanez@manchester.ac.uk>
+# Jeremie Dubois-Lacoste  
+# Leslie Perez Caceres    <leslie.perez.caceres@ulb.ac.be>
+#
+# This is free software, and you are welcome to redistribute it under certain
+# conditions.  See the GNU General Public License for details. There is NO
+# WARRANTY; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+#
+# irace builds upon previous code from the race package:
+#     race: Racing methods for the selection of the best
+#     Copyright (C) 2003 Mauro Birattari
+#------------------------------------------------------------------------------
+# installed at: /Library/Frameworks/R.framework/Versions/4.1-arm64/Resources/library/irace
+# called with: --debug-level 1
+Warning: A default scenario file './scenario.txt' has been found and will be read
+# 0 expression(s) specifying forbidden configurations read from '/Users/suzanneong/Desktop/Topics/GPLearn/forbidden.txt'
+Warning: Assuming 'mu = firstTest' because 'mu' cannot be lower than 'firstTest'
+## irace scenario:
+scenarioFile = "./scenario.txt"
+parameterFile = "/Users/suzanneong/Desktop/Topics/GPLearn/parameters.txt"
+execDir = "/Users/suzanneong/Desktop/Topics/GPLearn"
+logFile = "/Users/suzanneong/Desktop/Topics/GPLearn/irace.Rdata"
+recoveryFile = NULL
+instances = c("/Users/suzanneong/Desktop/Topics/GPLearn/../Datasets/body_fat.csv", "/Users/suzanneong/Desktop/Topics/GPLearn/../Datasets/Hill_Valley_with_noise.csv", "/Users/suzanneong/Desktop/Topics/GPLearn/../Datasets/allbp.csv", "/Users/suzanneong/Desktop/Topics/GPLearn/../Datasets/analcatdata_cyyoung9302.csv", "/Users/suzanneong/Desktop/Topics/GPLearn/../Datasets/229_pwLinear.csv", "/Users/suzanneong/Desktop/Topics/GPLearn/../Datasets/prnn_crabs.csv", "/Users/suzanneong/Desktop/Topics/GPLearn/../Datasets/tic_tac_toe.csv", "/Users/suzanneong/Desktop/Topics/GPLearn/../Datasets/503_wind.csv", "/Users/suzanneong/Desktop/Topics/GPLearn/../Datasets/588_fri_c4_1000_100.csv", "/Users/suzanneong/Desktop/Topics/GPLearn/../Datasets/658_fri_c3_250_25.csv")
+initConfigurations = NULL
+trainInstancesDir = "/Users/suzanneong/Desktop/Topics/GPLearn"
+trainInstancesFile = "/Users/suzanneong/Desktop/Topics/i.txt"
+configurationsFile = ""
+forbiddenExps = NULL = expression()
+forbiddenFile = "/Users/suzanneong/Desktop/Topics/GPLearn/forbidden.txt"
+targetRunner = "/Users/suzanneong/Desktop/Topics/GPLearn/target-runner"
+targetRunnerRetries = 0
+targetRunnerData = ""
+targetRunnerParallel = NULL
+targetEvaluator = NULL
+maxExperiments = 1000
+maxTime = 0
+budgetEstimation = 0.02
+digits = 2
+debugLevel = 1
+nbIterations = 0
+nbExperimentsPerIteration = 0
+sampleInstances = TRUE
+testType = "friedman"
+firstTest = 10
+eachTest = 2
+minNbSurvival = 0
+nbConfigurations = 0
+mu = 10
+confidence = 0.95
+deterministic = TRUE
+seed = 1000
+parallel = 4
+loadBalancing = FALSE
+mpi = FALSE
+batchmode = "0"
+softRestart = TRUE
+softRestartThreshold = 0.01
+testInstancesDir = ""
+testInstancesFile = "/Users/suzanneong/Desktop/Topics/i.txt"
+testInstances = c("1t" = "../Datasets/body_fat.csv", "2t" = "../Datasets/Hill_Valley_with_noise.csv", "3t" = "../Datasets/allbp.csv", "4t" = "../Datasets/analcatdata_cyyoung9302.csv", "5t" = "../Datasets/229_pwLinear.csv", "6t" = "../Datasets/prnn_crabs.csv", "7t" = "../Datasets/tic_tac_toe.csv", "8t" = "../Datasets/503_wind.csv", "9t" = "../Datasets/588_fri_c4_1000_100.csv", "10t" = "../Datasets/658_fri_c3_250_25.csv")
+testNbElites = 1
+testIterationElites = TRUE
+elitist = TRUE
+elitistNewInstances = 1
+elitistLimit = 2
+repairConfiguration = NULL
+capping = FALSE
+cappingType = "median"
+boundType = "candidate"
+boundMax = NULL
+boundDigits = 0
+boundPar = 1
+boundAsTimeout = TRUE
+postselection = 0
+aclib = FALSE
+## end of irace scenario
+# --- Parameters Hierarchy ---
+[1] "population"            "generation"            "crossover"             "parsimony_coefficient"
+           population            generation             crossover parsimony_coefficient 
+                    1                     1                     1                     1 
+           population            generation             crossover parsimony_coefficient 
+                   ""                    ""                    ""                    "" 
+              Parameter Level Depends.on
+1            population     1           
+2            generation     1           
+3             crossover     1           
+4 parsimony_coefficient     1           
+
+# ------------------------
+# 0 expression(s) specifying forbidden configurations read from '/Users/suzanneong/Desktop/Topics/GPLearn/forbidden.txt'
+# 2021-10-24 21:56:23 ACDT: Initialization
+# Elitist race
+# Elitist new instances: 1
+# Elitist limit: 2
+# nbIterations: 4
+# minNbSurvival: 4
+# nbParameters: 4
+# seed: 1000
+# confidence level: 0.95
+# budget: 1000
+# mu: 10
+# deterministic: TRUE
+
+# 2021-10-24 21:56:23 ACDT: Iteration 1 of 4
+# experimentsUsedSoFar: 0
+# remainingBudget: 1000
+# currentBudget: 250
+# nbConfigurations: 20
+# 2021-10-24 21:56:23 ACDT: Sample 20 configurations from uniform distribution
+# 2021-10-24 21:56:23 ACDT: Launch race
+# Markers:
+     x No test is performed.
+     c Configurations are discarded only due to capping.
+     - The test is performed and some configurations are discarded.
+     = The test is performed but no configuration is discarded.
+     ! The test is performed and configurations could be discarded but elite configurations are preserved.
+     . All alive configurations are elite and nothing is discarded
+
++-+-----------+-----------+-----------+---------------+-----------+--------+-----+----+------+
+| |   Instance|      Alive|       Best|      Mean best| Exp so far|  W time|  rho|KenW|  Qvar|
++-+-----------+-----------+-----------+---------------+-----------+--------+-----+----+------+
+|x|          1|         20|          2|  -0.5443310540|         20|00:00:28|   NA|  NA|    NA|
+|x|          2|         20|          7|  -0.7881603452|         40|00:00:28|-0.25|0.37|1.2030|
+|x|          3|         20|          7|  -0.8227907469|         60|00:00:34|-0.03|0.32|0.9917|
+|x|          4|         20|          7|   -1.654392032|         80|00:00:28|+0.13|0.35|0.8006|
+|x|          5|         20|          7|   -2.423486926|        100|00:00:40|+0.23|0.38|0.7048|
+|x|          6|         20|          4|   -2.202910770|        120|00:00:35|+0.19|0.32|0.7156|
+|x|          7|         20|          4|   -1.990743597|        140|00:00:33|+0.12|0.25|0.7705|
+|x|          8|         20|          4|   -1.880514286|        160|00:00:35|+0.11|0.22|0.7921|
+|x|          9|         20|          8|   -1.831624253|        180|00:00:32|+0.09|0.19|0.8091|
+|-|         10|         14|          8|   -2.539774716|        200|00:00:33|-0.03|0.07|0.9333|
++-+-----------+-----------+-----------+---------------+-----------+--------+-----+----+------+
+# Stopped because all instances (10) evaluated
+Best-so-far configuration:           8    mean value:    -2.539774716
+Description of the best-so-far configuration:
+  .ID. population generation crossover parsimony_coefficient .PARENT.
+8    8         60         41      0.96                  0.25       NA
+
+# 2021-10-24 22:01:54 ACDT: Extracting elites
+# 2021-10-24 22:01:54 ACDT: Elite configurations (first number is the configuration ID; listed from best to worst according to the sum of ranks):
+   .ID. population generation crossover parsimony_coefficient .PARENT. .ALIVE. .RANK. .WEIGHT.
+8     8         60         41      0.96                  0.25       NA    TRUE   59.0      0.4
+12   12        138         13      0.17                  0.31       NA    TRUE   65.0      0.3
+6     6        283         35      0.69                  0.72       NA    TRUE   67.5      0.2
+7     7        297         46      0.49                  0.42       NA    TRUE   69.0      0.1
+# 2021-10-24 22:01:54 ACDT: Initialise model
+# 2021-10-24 22:01:54 ACDT: End of iteration 1
+# 2021-10-24 22:01:54 ACDT: Iteration 2 of 4
+# experimentsUsedSoFar: 200
+# remainingBudget: 800
+# currentBudget: 266
+# nbConfigurations: 21
+# 2021-10-24 22:01:54 ACDT: Update model
+# 2021-10-24 22:01:54 ACDT: Sample 17 configurations from model
+# 2021-10-24 22:01:54 ACDT: Computing similarity of configurations ..................... DONE
+# 2021-10-24 22:01:54 ACDT: Launch race
+# Markers:
+     x No test is performed.
+     c Configurations are discarded only due to capping.
+     - The test is performed and some configurations are discarded.
+     = The test is performed but no configuration is discarded.
+     ! The test is performed and configurations could be discarded but elite configurations are preserved.
+     . All alive configurations are elite and nothing is discarded
+
++-+-----------+-----------+-----------+---------------+-----------+--------+-----+----+------+
+| |   Instance|      Alive|       Best|      Mean best| Exp so far|  W time|  rho|KenW|  Qvar|
++-+-----------+-----------+-----------+---------------+-----------+--------+-----+----+------+
+|x|          5|         21|         23|   -6.426785224|         17|00:00:26|   NA|  NA|    NA|
+|x|          8|         21|          8|   -3.492480982|         34|00:00:27|-0.21|0.40|1.2100|
+|x|          3|         21|          8|   -2.684452298|         51|00:00:24|-0.03|0.31|0.9034|
+|x|          7|         21|          8|   -2.187416880|         68|00:00:24|+0.01|0.25|0.9890|
+|x|          6|         21|          8|   -1.965042260|         85|00:00:21|+0.07|0.26|0.8671|
+|x|         10|         21|          8|   -3.123056698|        102|00:00:20|+0.08|0.23|0.8509|
+|x|          4|         21|          8|   -3.269648011|        119|00:00:22|+0.08|0.21|0.8674|
+|x|          2|         21|          8|   -2.975050876|        136|00:00:22|+0.07|0.19|0.9049|
+|x|          9|         21|         12|   -2.744041756|        153|00:00:23|+0.06|0.17|0.9080|
+|=|          1|         21|          8|   -2.539774716|        170|00:00:21|+0.03|0.12|0.9394|
++-+-----------+-----------+-----------+---------------+-----------+--------+-----+----+------+
+# Stopped because all instances (10) evaluated
+Best-so-far configuration:           8    mean value:    -2.539774716
+Description of the best-so-far configuration:
+  .ID. population generation crossover parsimony_coefficient .PARENT.
+8    8         60         41      0.96                  0.25       NA
+
+# 2021-10-24 22:05:50 ACDT: Extracting elites
+# 2021-10-24 22:05:50 ACDT: Elite configurations (first number is the configuration ID; listed from best to worst according to the sum of ranks):
+   .ID. population generation crossover parsimony_coefficient .PARENT. .ALIVE. .RANK. .WEIGHT.
+8     8         60         41      0.96                  0.25       NA    TRUE   83.5      0.4
+12   12        138         13      0.17                  0.31       NA    TRUE   86.5      0.3
+26   26        277         14      0.61                  0.65       12    TRUE   88.0      0.2
+33   33        209         27      0.36                  0.77        6    TRUE   90.5      0.1
+# 2021-10-24 22:05:50 ACDT: End of iteration 2
+# 2021-10-24 22:05:50 ACDT: Iteration 3 of 4
+# experimentsUsedSoFar: 370
+# remainingBudget: 630
+# currentBudget: 315
+# nbConfigurations: 22
+# 2021-10-24 22:05:50 ACDT: Update model
+# 2021-10-24 22:05:50 ACDT: Sample 18 configurations from model
+# 2021-10-24 22:05:50 ACDT: Computing similarity of configurations ...................... DONE
+# 2021-10-24 22:05:50 ACDT: Launch race
+# Markers:
+     x No test is performed.
+     c Configurations are discarded only due to capping.
+     - The test is performed and some configurations are discarded.
+     = The test is performed but no configuration is discarded.
+     ! The test is performed and configurations could be discarded but elite configurations are preserved.
+     . All alive configurations are elite and nothing is discarded
+
++-+-----------+-----------+-----------+---------------+-----------+--------+-----+----+------+
+| |   Instance|      Alive|       Best|      Mean best| Exp so far|  W time|  rho|KenW|  Qvar|
++-+-----------+-----------+-----------+---------------+-----------+--------+-----+----+------+
+|x|          8|         22|          8|   -1.485095460|         18|00:00:16|   NA|  NA|    NA|
+|x|          6|         22|         41|   -1.225251658|         36|00:00:19|-0.20|0.40|0.9977|
+|x|          2|         22|         41|   -1.121124748|         54|00:00:19|-0.15|0.23|1.0842|
+|x|          5|         22|         41|   -2.215810187|         72|00:00:23|-0.07|0.20|1.0528|
+|x|          3|         22|          8|   -2.008354321|         90|00:00:23|-0.00|0.20|0.9962|
+|x|          4|         22|          8|   -2.365161249|        108|00:00:18|+0.07|0.23|0.9191|
+|x|          9|         22|         12|   -2.155276613|        126|00:00:18|+0.07|0.20|0.9290|
+|x|          7|         22|         26|   -1.923476259|        144|00:00:19|+0.07|0.19|0.9442|
+|x|          1|         22|         26|   -1.770237903|        162|00:00:17|+0.09|0.19|0.9067|
+|-|         10|         17|         41|   -2.531229279|        180|00:00:17|-0.02|0.09|0.9511|
++-+-----------+-----------+-----------+---------------+-----------+--------+-----+----+------+
+# Stopped because all instances (10) evaluated
+Best-so-far configuration:          41    mean value:    -2.531229279
+Description of the best-so-far configuration:
+   .ID. population generation crossover parsimony_coefficient .PARENT.
+41   41        179         29      0.28                  0.86       33
+
+# 2021-10-24 22:09:04 ACDT: Extracting elites
+# 2021-10-24 22:09:04 ACDT: Elite configurations (first number is the configuration ID; listed from best to worst according to the sum of ranks):
+   .ID. population generation crossover parsimony_coefficient .PARENT. .ALIVE. .RANK. .WEIGHT.
+41   41        179         29      0.28                  0.86       33    TRUE   71.5      0.4
+8     8         60         41      0.96                  0.25       NA    TRUE   73.5      0.3
+45   45         72         37      0.92                  0.22        8    TRUE   76.0      0.2
+26   26        277         14      0.61                  0.65       12    TRUE   78.5      0.1
+# 2021-10-24 22:09:04 ACDT: End of iteration 3
+# 2021-10-24 22:09:04 ACDT: Iteration 4 of 4
+# experimentsUsedSoFar: 550
+# remainingBudget: 450
+# currentBudget: 450
+# nbConfigurations: 27
+# 2021-10-24 22:09:04 ACDT: Update model
+# 2021-10-24 22:09:04 ACDT: Sample 23 configurations from model
+# 2021-10-24 22:09:04 ACDT: Computing similarity of configurations ........................... DONE
+# 2021-10-24 22:09:04 ACDT: Launch race
+# Markers:
+     x No test is performed.
+     c Configurations are discarded only due to capping.
+     - The test is performed and some configurations are discarded.
+     = The test is performed but no configuration is discarded.
+     ! The test is performed and configurations could be discarded but elite configurations are preserved.
+     . All alive configurations are elite and nothing is discarded
+
++-+-----------+-----------+-----------+---------------+-----------+--------+-----+----+------+
+| |   Instance|      Alive|       Best|      Mean best| Exp so far|  W time|  rho|KenW|  Qvar|
++-+-----------+-----------+-----------+---------------+-----------+--------+-----+----+------+
+|x|          1|         27|         41|  -0.7453559925|         23|00:00:18|   NA|  NA|    NA|
+|x|          5|         27|         41|   -3.122611248|         46|00:00:22|-0.26|0.37|1.1471|
+|x|          6|         27|         41|   -2.458165729|         69|00:00:22|-0.07|0.29|1.0286|
+|x|         10|         27|         41|   -4.071906519|         92|00:00:20|-0.03|0.23|0.9516|
+|x|          4|         27|         41|   -4.087364392|        115|00:00:21|+0.00|0.20|0.9233|
+|x|          2|         27|         41|   -3.558282148|        138|00:00:17|-0.02|0.15|0.9865|
+|x|          7|         27|         41|   -3.149429073|        161|00:00:22|-0.01|0.13|0.9698|
+|x|          8|         27|         65|   -2.932045892|        184|00:00:20|-0.01|0.11|0.9816|
+|x|          9|         27|         65|   -2.723264027|        207|00:00:20|-0.03|0.08|0.9871|
+|=|          3|         27|         65|   -2.540142779|        230|00:00:21|-0.02|0.08|0.9658|
++-+-----------+-----------+-----------+---------------+-----------+--------+-----+----+------+
+# Stopped because all instances (10) evaluated
+Best-so-far configuration:          65    mean value:    -2.540142779
+Description of the best-so-far configuration:
+   .ID. population generation crossover parsimony_coefficient .PARENT.
+65   65        179         32      0.14                  0.87       41
+
+# 2021-10-24 22:12:32 ACDT: Extracting elites
+# 2021-10-24 22:12:32 ACDT: Elite configurations (first number is the configuration ID; listed from best to worst according to the sum of ranks):
+   .ID. population generation crossover parsimony_coefficient .PARENT. .ALIVE. .RANK. .WEIGHT.
+65   65        179         32      0.14                  0.87       41    TRUE  115.5      0.4
+61   61         60         33      0.84                  0.21       45    TRUE  117.5      0.3
+41   41        179         29      0.28                  0.86       33    TRUE  121.5      0.2
+8     8         60         41      0.96                  0.25       NA    TRUE  121.5      0.1
+# 2021-10-24 22:12:32 ACDT: End of iteration 4
+# 2021-10-24 22:12:32 ACDT: Iteration 5 of 5
+# experimentsUsedSoFar: 780
+# remainingBudget: 220
+# currentBudget: 220
+# nbConfigurations: 13
+# 2021-10-24 22:12:32 ACDT: Update model
+# 2021-10-24 22:12:32 ACDT: Sample 9 configurations from model
+# 2021-10-24 22:12:32 ACDT: Computing similarity of configurations ............. DONE
+# 2021-10-24 22:12:32 ACDT: Launch race
+# Markers:
+     x No test is performed.
+     c Configurations are discarded only due to capping.
+     - The test is performed and some configurations are discarded.
+     = The test is performed but no configuration is discarded.
+     ! The test is performed and configurations could be discarded but elite configurations are preserved.
+     . All alive configurations are elite and nothing is discarded
+
++-+-----------+-----------+-----------+---------------+-----------+--------+-----+----+------+
+| |   Instance|      Alive|       Best|      Mean best| Exp so far|  W time|  rho|KenW|  Qvar|
++-+-----------+-----------+-----------+---------------+-----------+--------+-----+----+------+
+|x|          5|         13|         80|   -6.426785224|          9|00:00:08|   NA|  NA|    NA|
+|x|          6|         13|         87|   -3.778029956|         18|00:00:07|-0.37|0.32|1.5742|
+|x|          1|         13|         65|   -2.458165729|         27|00:00:08|-0.00|0.33|1.1051|
+|x|          7|         13|         65|   -2.017701952|         36|00:00:09|-0.05|0.21|1.0665|
+|x|          4|         13|         65|   -2.444000739|         45|00:00:07|-0.04|0.17|0.8245|
+|x|          2|         13|         65|   -2.188812438|         54|00:00:08|-0.03|0.14|0.6727|
+|x|          3|         13|         65|   -2.003560882|         63|00:00:08|-0.05|0.10|0.7018|
+|x|         10|         13|         65|   -2.867256883|         72|00:00:07|-0.04|0.09|0.7164|
+|x|          9|         13|         65|   -2.665673796|         81|00:00:08|-0.07|0.05|0.7728|
+|=|          8|         13|         65|   -2.540142779|         90|00:00:08|-0.03|0.07|0.7614|
++-+-----------+-----------+-----------+---------------+-----------+--------+-----+----+------+
+# Stopped because all instances (10) evaluated
+Best-so-far configuration:          65    mean value:    -2.540142779
+Description of the best-so-far configuration:
+   .ID. population generation crossover parsimony_coefficient .PARENT.
+65   65        179         32      0.14                  0.87       41
+
+# 2021-10-24 22:13:54 ACDT: Extracting elites
+# 2021-10-24 22:13:54 ACDT: Elite configurations (first number is the configuration ID; listed from best to worst according to the sum of ranks):
+   .ID. population generation crossover parsimony_coefficient .PARENT. .ALIVE. .RANK. .WEIGHT.
+65   65        179         32      0.14                  0.87       41    TRUE   59.0      0.4
+61   61         60         33      0.84                  0.21       45    TRUE   62.0      0.3
+41   41        179         29      0.28                  0.86       33    TRUE   62.0      0.2
+8     8         60         41      0.96                  0.25       NA    TRUE   63.5      0.1
+# 2021-10-24 22:13:54 ACDT: End of iteration 5
+# 2021-10-24 22:13:54 ACDT: Iteration 6 of 6
+# experimentsUsedSoFar: 870
+# remainingBudget: 130
+# currentBudget: 130
+# nbConfigurations: 8
+# 2021-10-24 22:13:54 ACDT: Update model
+# 2021-10-24 22:13:54 ACDT: Sample 4 configurations from model
+# 2021-10-24 22:13:54 ACDT: Computing similarity of configurations ........ DONE
+# 2021-10-24 22:13:54 ACDT: Launch race
+# Markers:
+     x No test is performed.
+     c Configurations are discarded only due to capping.
+     - The test is performed and some configurations are discarded.
+     = The test is performed but no configuration is discarded.
+     ! The test is performed and configurations could be discarded but elite configurations are preserved.
+     . All alive configurations are elite and nothing is discarded
+
++-+-----------+-----------+-----------+---------------+-----------+--------+-----+----+------+
+| |   Instance|      Alive|       Best|      Mean best| Exp so far|  W time|  rho|KenW|  Qvar|
++-+-----------+-----------+-----------+---------------+-----------+--------+-----+----+------+
+|x|          3|          8|         61|   -1.243551003|          4|00:00:03|   NA|  NA|    NA|
+|x|          1|          8|         90|  -0.9348985526|          8|00:00:03|-0.19|0.40|1.0847|
+|x|          7|          8|         90|  -0.8553692430|         12|00:00:04|-0.10|0.27|0.6532|
+|x|          2|          8|         90|  -0.8697446646|         16|00:00:03|-0.06|0.20|0.4724|
+|x|          9|          8|         90|  -0.9063975521|         20|00:00:03|-0.17|0.07|0.6349|
+|x|          6|          8|         90|  -0.9435437417|         24|00:00:03|-0.05|0.12|0.6546|
+|x|          8|          8|         61|   -1.001530279|         28|00:00:03|-0.06|0.09|0.6763|
+|x|         10|          8|         61|   -1.990480105|         32|00:00:03|-0.05|0.08|0.5853|
+|x|          5|          8|         90|   -2.455644710|         36|00:00:04|-0.07|0.05|0.6387|
+|=|          4|          8|         90|   -2.624999827|         40|00:00:03|-0.06|0.05|0.5693|
++-+-----------+-----------+-----------+---------------+-----------+--------+-----+----+------+
+# Stopped because all instances (10) evaluated
+Best-so-far configuration:          90    mean value:    -2.624999827
+Description of the best-so-far configuration:
+   .ID. population generation crossover parsimony_coefficient .PARENT.
+90   90        181         33      0.12                  0.91       65
+
+# 2021-10-24 22:14:33 ACDT: Extracting elites
+# 2021-10-24 22:14:33 ACDT: Elite configurations (first number is the configuration ID; listed from best to worst according to the sum of ranks):
+   .ID. population generation crossover parsimony_coefficient .PARENT. .ALIVE. .RANK. .WEIGHT.
+90   90        181         33      0.12                  0.91       65    TRUE   39.5      0.4
+61   61         60         33      0.84                  0.21       45    TRUE   42.5      0.3
+65   65        179         32      0.14                  0.87       41    TRUE   43.0      0.2
+41   41        179         29      0.28                  0.86       33    TRUE   44.0      0.1
+# 2021-10-24 22:14:33 ACDT: End of iteration 6
+# 2021-10-24 22:14:33 ACDT: Iteration 7 of 7
+# experimentsUsedSoFar: 910
+# remainingBudget: 90
+# currentBudget: 90
+# nbConfigurations: 6
+# 2021-10-24 22:14:33 ACDT: Update model
+# 2021-10-24 22:14:33 ACDT: Sample 2 configurations from model
+# 2021-10-24 22:14:33 ACDT: Computing similarity of configurations ...... DONE
+# 2021-10-24 22:14:33 ACDT: Launch race
+# Markers:
+     x No test is performed.
+     c Configurations are discarded only due to capping.
+     - The test is performed and some configurations are discarded.
+     = The test is performed but no configuration is discarded.
+     ! The test is performed and configurations could be discarded but elite configurations are preserved.
+     . All alive configurations are elite and nothing is discarded
+
++-+-----------+-----------+-----------+---------------+-----------+--------+-----+----+------+
+| |   Instance|      Alive|       Best|      Mean best| Exp so far|  W time|  rho|KenW|  Qvar|
++-+-----------+-----------+-----------+---------------+-----------+--------+-----+----+------+
+|x|          3|          6|         61|   -1.243551003|          2|00:00:03|   NA|  NA|    NA|
+|x|          9|          6|         61|   -1.148280053|          4|00:00:03|-0.48|0.26|1.2198|
+|x|          6|          6|         92|   -1.160544844|          6|00:00:03|-0.31|0.13|1.0002|
+|x|          1|          6|         90|   -1.013020224|          8|00:00:03|-0.17|0.12|0.9358|
+|x|         10|          6|         90|   -2.593041957|         10|00:00:03|-0.13|0.10|0.7281|
+|x|          8|          6|         61|   -2.385776548|         12|00:00:03|-0.07|0.11|0.7028|
+|x|          7|          6|         61|   -2.144424273|         14|00:00:03|-0.06|0.09|0.6012|
+|x|          5|          6|         90|   -2.648491432|         16|00:00:03|+0.02|0.14|0.5867|
+|x|          4|          6|         90|   -2.815236372|         18|00:00:03|+0.02|0.13|0.5258|
+|=|          2|          6|         90|   -2.624999827|         20|00:00:03|+0.02|0.11|0.4762|
++-+-----------+-----------+-----------+---------------+-----------+--------+-----+----+------+
+# Stopped because all instances (10) evaluated
+Best-so-far configuration:          90    mean value:    -2.624999827
+Description of the best-so-far configuration:
+   .ID. population generation crossover parsimony_coefficient .PARENT.
+90   90        181         33      0.12                  0.91       65
+
+# 2021-10-24 22:15:06 ACDT: Extracting elites
+# 2021-10-24 22:15:06 ACDT: Elite configurations (first number is the configuration ID; listed from best to worst according to the sum of ranks):
+   .ID. population generation crossover parsimony_coefficient .PARENT. .ALIVE. .RANK. .WEIGHT.
+90   90        181         33      0.12                  0.91       65    TRUE   31.5      0.4
+61   61         60         33      0.84                  0.21       45    TRUE   33.0      0.3
+65   65        179         32      0.14                  0.87       41    TRUE   33.0      0.2
+41   41        179         29      0.28                  0.86       33    TRUE   34.5      0.1
+# 2021-10-24 22:15:06 ACDT: End of iteration 7
+# 2021-10-24 22:15:06 ACDT: Iteration 8 of 8
+# experimentsUsedSoFar: 930
+# remainingBudget: 70
+# currentBudget: 70
+# nbConfigurations: 5
+# 2021-10-24 22:15:06 ACDT: Update model
+# 2021-10-24 22:15:06 ACDT: Sample 1 configurations from model
+# 2021-10-24 22:15:06 ACDT: Computing similarity of configurations ..... DONE
+# 2021-10-24 22:15:07 ACDT: Launch race
+# Markers:
+     x No test is performed.
+     c Configurations are discarded only due to capping.
+     - The test is performed and some configurations are discarded.
+     = The test is performed but no configuration is discarded.
+     ! The test is performed and configurations could be discarded but elite configurations are preserved.
+     . All alive configurations are elite and nothing is discarded
+
++-+-----------+-----------+-----------+---------------+-----------+--------+-----+----+------+
+| |   Instance|      Alive|       Best|      Mean best| Exp so far|  W time|  rho|KenW|  Qvar|
++-+-----------+-----------+-----------+---------------+-----------+--------+-----+----+------+
+|x|          7|          5|         90|  -0.6963106238|          1|00:00:01|   NA|  NA|    NA|
+|x|          5|          5|         90|   -3.561547924|          2|00:00:01|+0.00|0.50|0.4000|
+|x|         10|          5|         90|   -5.345408245|          3|00:00:01|+0.00|0.33|0.2667|
+|x|          8|          5|         61|   -4.148600369|          4|00:00:01|-0.23|0.08|0.5210|
+|x|          4|          5|         61|   -4.148719473|          5|00:00:01|-0.17|0.06|0.3926|
+|x|          2|          5|         61|   -3.609411382|          6|00:00:01|-0.14|0.05|0.3151|
+|x|          9|          5|         61|   -3.244211056|          7|00:00:01|-0.11|0.04|0.2631|
+|x|          6|          5|         90|   -3.047525146|          8|00:00:01|-0.13|0.01|0.3345|
+|x|          1|          5|         90|   -2.791728573|          9|00:00:01|-0.06|0.05|0.3669|
+|=|          3|          5|         90|   -2.624999827|         10|00:00:01|-0.10|0.01|0.4324|
++-+-----------+-----------+-----------+---------------+-----------+--------+-----+----+------+
+# Stopped because all instances (10) evaluated
+Best-so-far configuration:          90    mean value:    -2.624999827
+Description of the best-so-far configuration:
+   .ID. population generation crossover parsimony_coefficient .PARENT.
+90   90        181         33      0.12                  0.91       65
+
+# 2021-10-24 22:15:23 ACDT: Extracting elites
+# 2021-10-24 22:15:23 ACDT: Elite configurations (first number is the configuration ID; listed from best to worst according to the sum of ranks):
+   .ID. population generation crossover parsimony_coefficient .PARENT. .ALIVE. .RANK. .WEIGHT.
+90   90        181         33      0.12                  0.91       65    TRUE   28.0      0.4
+65   65        179         32      0.14                  0.87       41    TRUE   30.0      0.3
+61   61         60         33      0.84                  0.21       45    TRUE   30.5      0.2
+94   94         60         33      0.81                  0.20       61    TRUE   30.5      0.1
+# 2021-10-24 22:15:23 ACDT: End of iteration 8
+# 2021-10-24 22:15:23 ACDT: Iteration 9 of 9
+# experimentsUsedSoFar: 940
+# remainingBudget: 60
+# currentBudget: 60
+# nbConfigurations: 5
+# 2021-10-24 22:15:23 ACDT: Update model
+# 2021-10-24 22:15:23 ACDT: Sample 1 configurations from model
+# 2021-10-24 22:15:23 ACDT: Computing similarity of configurations ..... DONE
+# 2021-10-24 22:15:23 ACDT: Launch race
+# Markers:
+     x No test is performed.
+     c Configurations are discarded only due to capping.
+     - The test is performed and some configurations are discarded.
+     = The test is performed but no configuration is discarded.
+     ! The test is performed and configurations could be discarded but elite configurations are preserved.
+     . All alive configurations are elite and nothing is discarded
+
++-+-----------+-----------+-----------+---------------+-----------+--------+-----+----+------+
+| |   Instance|      Alive|       Best|      Mean best| Exp so far|  W time|  rho|KenW|  Qvar|
++-+-----------+-----------+-----------+---------------+-----------+--------+-----+----+------+
+|x|          4|          5|         90|   -4.149195887|          1|00:00:02|   NA|  NA|    NA|
+|x|          1|          5|         90|   -2.447275940|          2|00:00:02|+0.00|0.50|0.4000|
+|x|          5|          5|         90|   -3.773779034|          3|00:00:03|+0.20|0.47|0.4245|
+|x|          6|          5|         90|   -3.112652948|          4|00:00:02|+0.27|0.45|0.5367|
+|x|          9|          5|         90|   -2.700724179|          5|00:00:02|+0.20|0.36|0.4420|
+|x|          3|          5|         90|   -2.438010335|          6|00:00:03|+0.01|0.17|0.5198|
+|x|          7|          5|         90|   -2.189196090|          7|00:00:03|+0.01|0.15|0.4475|
+|x|          2|          5|         90|   -2.029655445|          8|00:00:02|+0.00|0.13|0.3927|
+|x|         10|          5|         90|   -2.794485828|          9|00:00:02|+0.00|0.11|0.3499|
+|=|          8|          5|         90|   -2.624999827|         10|00:00:02|-0.05|0.06|0.4099|
++-+-----------+-----------+-----------+---------------+-----------+--------+-----+----+------+
+# Stopped because all instances (10) evaluated
+Best-so-far configuration:          90    mean value:    -2.624999827
+Description of the best-so-far configuration:
+   .ID. population generation crossover parsimony_coefficient .PARENT.
+90   90        181         33      0.12                  0.91       65
+
+# 2021-10-24 22:15:53 ACDT: Extracting elites
+# 2021-10-24 22:15:53 ACDT: Elite configurations (first number is the configuration ID; listed from best to worst according to the sum of ranks):
+   .ID. population generation crossover parsimony_coefficient .PARENT. .ALIVE. .RANK. .WEIGHT.
+90   90        181         33      0.12                  0.91       65    TRUE   27.5      0.4
+65   65        179         32      0.14                  0.87       41    TRUE   29.5      0.3
+61   61         60         33      0.84                  0.21       45    TRUE   29.5      0.2
+94   94         60         33      0.81                  0.20       61    TRUE   29.5      0.1
+# 2021-10-24 22:15:53 ACDT: End of iteration 9
+# 2021-10-24 22:15:53 ACDT: Stopped because there is not enough budget left to race more than the minimum (4)
+# You may either increase the budget or set 'minNbSurvival' to a lower value
+# Iteration: 10
+# nbIterations: 10
+# experimentsUsedSoFar: 950
+# timeUsed: 0
+# remainingBudget: 50
+# currentBudget: 50
+# number of elites: 4
+# nbConfigurations: 4
+# Best configurations (first number is the configuration ID; listed from best to worst according to the sum of ranks):
+   population generation crossover parsimony_coefficient
+90        181         33      0.12                  0.91
+65        179         32      0.14                  0.87
+61         60         33      0.84                  0.21
+94         60         33      0.81                  0.20
+# Best configurations as commandlines (first number is the configuration ID; same order as above):
+90  --pop 181 --gen 33 --cros 0.12 --pc 0.91
+65  --pop 179 --gen 32 --cros 0.14 --pc 0.87
+61  --pop 60 --gen 33 --cros 0.84 --pc 0.21
+94  --pop 60 --gen 33 --cros 0.81 --pc 0.2
+ 
+
+# 2021-10-24 22:15:53 ACDT: Testing configurations (in no particular order): 8 41 65 90
+   population generation crossover parsimony_coefficient
+8          60         41      0.96                  0.25
+41        179         29      0.28                  0.86
+65        179         32      0.14                  0.87
+90        181         33      0.12                  0.91
+# Testing of elite configurations: 1 
+# Testing iteration configurations: TRUE 
+# 0 expression(s) specifying forbidden configurations read from '/Users/suzanneong/Desktop/Topics/GPLearn/forbidden.txt'
+# 2021-10-24 22:16:31 ACDT: Testing results (column number is configuration ID in no particular order):
+             8         41         65         90
+1t  -9.0469663 -7.0203945 -7.0203945 -7.0203945
+2t  -0.6963106 -0.7177406 -0.7177406 -0.7177406
+3t  -0.6642307 -1.0683949 -1.0683949 -1.0683949
+4t  -0.4046921 -0.5443311 -0.5443311 -0.5443311
+5t  -4.1491959 -4.1491959 -4.1491959 -4.0663038
+6t  -0.5642717 -0.9128709 -0.9128709 -0.6027055
+7t  -1.0755438 -1.1292747 -1.1292747 -0.5049399
+8t  -4.9575907 -4.9298360 -4.9298360 -4.9298360
+9t  -1.3656174 -1.4603083 -1.4603083 -1.4179756
+10t -1.3156265 -1.0547079 -1.4103636 -1.4103636
+# 2021-10-24 22:16:31 ACDT: Finished testing
+[1m[7m%[27m[1m[0m                                                                                                                                 ]7;file://Sushis-MacBook.local/Users/suzanneong/Desktop/Topics/GPLearn[0m[27m[24m[J(base) suzanneong@Sushis-MacBook GPLearn % [K[?2004hirace --debug-level 1     [26D                     [21Deexit[?2004l
+Saving session...
+...saving history...truncating history files...
+...completed.
+
+Script done on Sun Oct 24 22:24:35 2021
