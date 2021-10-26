@@ -31,6 +31,6 @@ Others:
  - For visualisations and statistical reference for post-processing, access the "Post-processing.ipynb" in Jupyter Notebook to review.
 
 # Operating System
-- Operational in MacOS 
-- In the case for Windows, switch the target-runner to target-runner.bat in the scenario.txt file for the configuration. 
-For Windows user, compile the program by changing "target-runner" into "./Unused/target-runner.bat" to test out 
+- For MacOS and Windows users, install the irace package based on the given instructions in https://cran.r-project.org/web/packages/irace/vignettes/irace-package.pdf. If successful, it should be able to run using the command 
+```irace```
+- For Windows users, switch the target-runner in the scenario.txt to "./Unused/target-runner.bat" to run. 
