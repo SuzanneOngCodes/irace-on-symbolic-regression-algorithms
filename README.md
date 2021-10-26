@@ -25,7 +25,7 @@ Available list of text files for instances in scenario.txt:
 
 Others: 
  - All datasets used and created are available at Datasets folder
- - Codes for algorithms without irace [ Random Search CV ] are available at "Withoutirace" directory
+ - Codes for algorithms without irace [ Random Search CV ] are available at "WithoutIrace" directory
  - Mean absolute error, Mean squared error, Root mean squared error and training time generated are added as .csv files at the "configuration" folder for each algorithm 
  - Logbooks for each algorithm on given datasets are available at Logbook folder
  - For visualisations and statistical reference for post-processing, access the "Post-processing.ipynb" in Jupyter Notebook to review.
