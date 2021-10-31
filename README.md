@@ -28,7 +28,7 @@ Others:
  - Codes for algorithms without irace [ Random Search CV ] are available at "WithoutIrace" directory
  - Mean absolute error, Mean squared error, Root mean squared error and training time generated are added as .csv files at the "configuration" folder for each algorithm 
  - Logbooks for each algorithm on given datasets are available at Logbook folder
- - For visualisations and statistical reference for post-processing, access the "Post-processing.ipynb" in Jupyter Notebook to review.
+ - For visualisations and statistical reference on post-processing, access the "Post-processing.ipynb" in Jupyter Notebook to review.
 
 # Operating System
 - For MacOS and Windows users, install the irace package based on the given instructions in https://cran.r-project.org/web/packages/irace/vignettes/irace-package.pdf. If successful, it should be able to run using the command 
