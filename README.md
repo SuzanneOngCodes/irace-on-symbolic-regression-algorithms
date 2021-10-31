@@ -18,7 +18,7 @@ Available algorithms and their API references in the respective directories:
 Other experimented algorithms are available at "Experimental" directory for future reference. 
 
 Available list of text files for instances in scenario.txt:
- - i.txt = For Black-box problem datasets
+ - i.txt = For Real-world problem datasets
  - Al.txt = For Al-Feynman's datasets [https://space.mit.edu/home/tegmark/aifeynman.html]
  - benchmark.txt & benchmarkTT.txt = For synthetically made datasets from GPLearn benchmarks [https://dl.acm.org/doi/pdf/10.1145/3205651.3208293]
  - St.txt = For Strogatz's datasets
